@@ -44,3 +44,5 @@ each table must to have id  and sort key (optional). Local and global index to i
 Billig options:
 - Provisioned: read/write expected and scale based on these limits, predictable use
 - On demand: storage/read/write, scale troughtput to meet the demand
+
+- record, attribute and table
