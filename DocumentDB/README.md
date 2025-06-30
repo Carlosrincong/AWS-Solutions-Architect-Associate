@@ -6,3 +6,4 @@ MongoDB workloads at scale
 the storage and compute are decoupled, allowing each to scale independently.
 Use cases: content management systems, profile management, and web and mobile applications.
 DocumentDB has API compatibility with MongoDB
+Amazon DocumentDB is used for storing semistructured data as a document

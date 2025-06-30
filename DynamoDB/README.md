@@ -5,7 +5,7 @@ https://aws.amazon.com/dynamodb/#
 DynamoDB is a fully managed NoSQL
 tight integration with infrastructure as code (IaC)
 OLTP
-key-value
+key-value and document
 non-relational database
 pricing: storage/read/write
 serveless
@@ -29,3 +29,18 @@ Security
 - Data is redundantly stored on multiple devices across multiple facilities in a DynamoDB Region.  
 - Data is fully encrypted at rest.
 - Use IAM to manage access permissions 
+- Encryption in transit and at rest
+
+Amazon DynamoDB can handle more than 10 trillion requests per day and support peaks of more than 20 million requests per second. 
+
+mobile, web, gaming, ad tech, IoT
+
+DynamoDB supports ACID-compliant transactions.
+
+Point in time recovery
+
+each table must to have id  and sort key (optional). Local and global index to improve the data access
+
+Billig options:
+- Provisioned: read/write expected and scale based on these limits, predictable use
+- On demand: storage/read/write, scale troughtput to meet the demand
