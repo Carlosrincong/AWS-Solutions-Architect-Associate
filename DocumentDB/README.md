@@ -7,3 +7,5 @@ the storage and compute are decoupled, allowing each to scale independently.
 Use cases: content management systems, profile management, and web and mobile applications.
 DocumentDB has API compatibility with MongoDB
 Amazon DocumentDB is used for storing semistructured data as a document
+
+With Amazon DocumentDB’s document data model, you can manage profiles and preferences for millions of users and scale to process millions of user requests per second with millisecond latency.

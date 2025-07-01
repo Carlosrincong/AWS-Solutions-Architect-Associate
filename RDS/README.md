@@ -65,3 +65,7 @@ Pricing
 - Host instance (reserved or on-demand)
 - Storage
 - Traffic from and to
+
+
+
+ read replica, which is asynchronously updated. usefull for read-heavy database workloads beyond the capacity constraints of a single database instance.
