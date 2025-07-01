@@ -46,3 +46,6 @@ Billig options:
 - On demand: storage/read/write, scale troughtput to meet the demand
 
 - record, attribute and table
+
+
+You can use Amazon DynamoDB Accelerator (DAX), which is an in-memory store for DynamoDB, without the need to modify application logic.
