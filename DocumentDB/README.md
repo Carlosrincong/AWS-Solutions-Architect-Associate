@@ -19,7 +19,7 @@ Use case:
 Pricing:
 - Instance host
 - Storage
-- Backups in other AZ
+- Backups in other region
 - IOPS
 - Data transfer out of the database
 
