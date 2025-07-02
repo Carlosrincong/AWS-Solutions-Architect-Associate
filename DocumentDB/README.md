@@ -23,3 +23,12 @@ Pricing:
 - IOPS
 - Data transfer out of the database
 
+cluster: instances + volume storage
+volume stores 6 copies of the data in 3 AZ
+VPC is required.  DocumentDB only run in VPC
+
+Security
+- IAM: users, roles and policies
+- TLS to connect to the database
+- Encrypt data in transit and at rest
+- 
