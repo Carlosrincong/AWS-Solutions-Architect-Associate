@@ -12,12 +12,22 @@ ElastiCache is a popular choice for gaming, advertising technology (ad tech), fi
 No longer need to perform management tasks such as hardware provisioning, software patching, setup, configuration, and failure recovery
 
 
-Multiple user accessing to the same content at the same time. Cache is a repository of frequently accessed content. without in-memmory database, each request is sent directly to the database in the backend. This can overload the databse.
+Multiple user accessing to the same content at the same time. Cache is a repository of frequently accessed content. without in-memmory database, each request is sent directly to the database in the backend. This can overload the databse. In-memmory improve the response time
 
 Redis: support complex data types, data replication and HA
 memcahed: data relativly small and static.
 
-
 Pricing:
 - nodes: on demand and reserved (1-3y)
 - no elasticcache charges for datatransfer
+
+Load data to the cache
+- lazy loading is reactive (first request)
+- write-through is proactive (when data is inserted into database)
+
+security
+- IAM
+- VPC and security groups
+- connectivity with direct connect or VPN, for on-premise database
+- encryption at rest and in transit
+
