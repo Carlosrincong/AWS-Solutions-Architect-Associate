@@ -9,7 +9,8 @@ https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html
     - Layer 4 adds the functionality to support the networking used on the internet.
     - Layer 7 adds protocols and functions at the software level for applications.
 - The Region in which you place your infrastructure impacts costs and, depending on where your end users live, latency. 
-- Tenancy enabled forces everything resource in the vpc to be in dedicated instances.
+- Tenancy enabled in a VPC forces everything resource in the vpc to be in dedicated instances.
+- AWS provides load balancers to achieve high availability, fault-tolerance, and scaling, and also custom Amazon VPCs where two subnets can be configured, each in a separate Availability Zone which creates a Multi-AZ design.  
 
 # VPC
 VPC is an isolated network that you create in the AWS Cloud, consist of: VPC name + CIDR + Region

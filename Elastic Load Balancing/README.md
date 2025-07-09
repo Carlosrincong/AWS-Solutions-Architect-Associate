@@ -21,7 +21,6 @@ Types:
 - Establishing a connection to a backend EC2 instance using TCP and marking the instance as available if the connection is successful. BUT , only verifying that the port of an application is open doesn’t mean that the application is working
 - Making an HTTP or HTTPS request to a webpage that you specify and validating that an HTTP response code is returned. BUT, making a call to the home page of an application is the right way either.
 
-
 A way to strengthen the health check is to create a **monitoring webpage**, such as /monitor. It will make a call to the database to ensure that it can connect, get data, and make a call to Amazon S3. Then, you point the health check on the load balancer to the /monitor page.
 
 ### ELB components
@@ -44,6 +43,9 @@ A way to strengthen the health check is to create a **monitoring webpage**, such
 - makes routing decisions based on the HTTP and HTTPS protocol. This facilitates granular routing to target groups.
 - TLS offloading using a SSL Certificate. This ensures that the traffic between the client and Application Load Balancer is encrypted.
 - Supports sticky sessions: If requests must be sent to the same backend server because the application is stateful, use the sticky session feature. This feature uses an HTTP cookie to remember which server to send the traffic to across connections.
+- The Application Load Balancer has individual nodes running in each Availability Zone that are configured with the Application Load Balancer. 
+- Internal:  to balance loads between the layers of a multi-tier application
+- Extertnal: to balance loads inside the Amazon VPC
 
 #### Network Load Balancer (NLB)
 - TCP and User Datagram Protocol (UDP) connection based
@@ -62,3 +64,12 @@ It provides a gateway for distributing traffic across multiple virtual appliance
 - Higher availability for **third-party** virtual appliances
 - Can be monitored using CloudWatch metrics.
 - Connects internet gateways, virtual private clouds (VPCs), and other network resources over a private network.
+
+Gateway Load Balancer endpoints 
+- Gateway Load Balancers use Gateway Load Balancer endpoints to securely exchange traffic across VPC boundaries. 
+- A Gateway Load Balancer endpoint is a VPC endpoint that provides private connectivity between virtual appliances in the service provider VPC and application servers in the service consumer VPC. 
+- You deploy the Gateway Load Balancer in the same VPC as the virtual appliances. You register the virtual appliances with a target group for the Gateway Load Balancer.
+
+#### Classic Load Balancer (CLB)
+This is the legacy load balancer for AWS.
+Classic Load Balancers are not recommended for use unless you have legacy services or applications that need the Classic Load Balancer.
