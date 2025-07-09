@@ -49,14 +49,17 @@ IAM lets you control who (group, user or role) can configure and manage your Ama
 Think of a network access control list (network ACL) as a virtual firewall at the subnet level. 
 Allow and deny type of rules are allowed to be defined in the ACL.
 Network ACLs are considered stateless, so you need to include both the inbound and outbound ports used for the protocol
+The default network ACL allows all traffic in and out by default.
 - Default network ACL: configured by default to allow incoming and outgoing traffic
 - Custom network ACL
 #### Security group
-Security group is an instance level firewall that will allow traffic to reach the instance.
+Security group is an instance level firewall that will allow traffic to reach the instance (resource level).
 SG is not optional when an instance is created.
 The default configuration of a security group blocks all inbound traffic and allows all outbound traffic. 
 To allow inbound traffic, you must create inbound (only allow) rules.
 A common design pattern is to organize resources into different groups and create security groups for each to control network communication between them.
+SG are Statefull 
+security groups are not capable of explicitly blocking traffic. If you need to block a certain IP address or a block of IP addresses, you will require assistance from network ACLs.
 
 ![security_groups](/img/security_groups.jpg)
 
@@ -76,6 +79,8 @@ Manage and simplify connections and peering for your Amazon VPCs
 
 ## Monitor
 #### Amazon VPC Flow Logs
+VPC flow logs capture information about IP traffic going to and from network interfaces in your Amazon VPC.
+Once you've set up a flow log for your Amazon VPC, you can designate an Amazon S3 bucket to store them in. Those logs can then be reviewed manually or even handled by a data processing solution to automate detection of problems in your network traffic.
 #### VPC Traffic Mirroring
 #### Amazon CloudWatch
 
