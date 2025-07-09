@@ -42,6 +42,9 @@ Route Table can be attached to a subnet. Not to a VPC
 - Destination (IP where you want send traffic), Target (Service when the traffic is sent)
 
 ## Security
+#### IAM 
+IAM lets you control who (group, user or role) can configure and manage your Amazon VPCs with IAM Policies or IAM Roles.
+
 #### Access control list (ACL)
 Think of a network access control list (network ACL) as a virtual firewall at the subnet level. 
 Allow and deny type of rules are allowed to be defined in the ACL.
