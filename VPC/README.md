@@ -8,6 +8,8 @@ https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html
     - Layer 3 adds cross networking addressing. 
     - Layer 4 adds the functionality to support the networking used on the internet.
     - Layer 7 adds protocols and functions at the software level for applications.
+- The Region in which you place your infrastructure impacts costs and, depending on where your end users live, latency. 
+- Tenancy enabled forces everything resource in the vpc to be in dedicated instances.
 
 # VPC
 VPC is an isolated network that you create in the AWS Cloud, consist of: VPC name + CIDR + Region
@@ -62,6 +64,7 @@ A common design pattern is to organize resources into different groups and creat
 To activate internet connectivity for your VPC, you must create an internet gateway to connect your VPC to the internet.
 NAT translates private IP addresses to public IP addresses, ensuring communication out to the internet.
 An Amazon VPC can have one internet gateway(opens in a new tab) at a time, and it is a regional resilient service ensuring high availability. 
+The only architectural difference between a public and private subnet is that a public subnet has a route to an internet gateway.
 #### Virtual private gateway
 A virtual private gateway connects your VPC to another private network.
 When you have both gateways, you can then establish an encrypted virtual private network (VPN) connection between the two sides.
