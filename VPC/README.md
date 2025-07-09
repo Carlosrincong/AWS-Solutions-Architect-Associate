@@ -13,8 +13,8 @@ https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html
 VPC is an isolated network that you create in the AWS Cloud, consist of: VPC name + CIDR + Region
 Every instance must live inside of a VPC
 
-- Default VPC - private network for AWS resources. Any resource that you put inside the default VPC will be public and accessible by the internet. AWS Creates VPCs in every region by Default in the Default VPC
-- Custom VPCs is more secure and provide more granular access ti the internet
+- Default VPC: AWS Creates VPCs in every region by Default in the Default VPC. Each default Amazon VPC creates a public subnet within each Availability Zone within the supported Region. Any resource that you put inside the default VPC will be public and accessible by the internet.
+- Custom VPCs is more secure and provide more granular access to the internet. This is a regional service. Amazon VPC must be explicitly defined when you create it; nothing is allowed in or out without explicit configuration. 
 
 ## Subnets
 -   Subnets are used to provide high availability and connectivity options for your resources. Use a public subnet for resources that must be connected to the internet and a private subnet for resources that won't be connected to the internet.
