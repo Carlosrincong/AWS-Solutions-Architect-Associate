@@ -13,6 +13,7 @@ Features
 - Hybrid mode: also load balances to on-premises servers.
 - High availability: the load balancer's targets are deployed across multiple Availability Zones.
 - Scalability: scales to meet the demand of the incoming traffic.
+- This is a regional service
 
 ### Health checks 
 HC to route traffic to only healthy EC2 instances. 
