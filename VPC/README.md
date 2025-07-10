@@ -11,6 +11,8 @@ https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html
 - The Region in which you place your infrastructure impacts costs and, depending on where your end users live, latency. 
 - Tenancy enabled in a VPC forces everything resource in the vpc to be in dedicated instances.
 - AWS provides load balancers to achieve high availability, fault-tolerance, and scaling, and also custom Amazon VPCs where two subnets can be configured, each in a separate Availability Zone which creates a Multi-AZ design.  
+- You cannot alter or modify the CIDR block of a deployed Amazon VPC, so it is better to pick a CIDR block that has more IP addresses than needed
+-  the CIDR range used in Amazon VPC must not overlap or cause a conflict with the CIDR block in the on-premises data center.
 
 # VPC
 VPC is an isolated network that you create in the AWS Cloud, consist of: VPC name + CIDR + Region
@@ -216,3 +218,11 @@ Set up network security acces at VPC-level
 # BP
 - a common practice to connect to a Data base used in a Three tier web app is using a bastion instance. This istance is in the public subnet, is internet facing and have connectovity with the database. Other service required is setup a NAT server in the public subnet to allow the traffic from de databse to send pachages to internet. You need to define a route in the private route table to direct the internet traffic to the NAT server in the public subnet. 
 Use the virtual private gateway to stablish a on premise connectivity to the database, and add a reoute in the private route table to direct traffic which pretend to reach the on premise CIDR Block through the virtual private gateway. In this case you dont use the bastion instance.
+
+# multi-tier architecture
+- Single-tier VPC for applications: 
+    - Doesn't use any private data
+    - Can be unavailable for extended periods if something fail
+    - Will only ever be used by you
+- N-tier VPC  to limit access and tight coupling as much as possible. 
+- Complex designs with connectivity and peering options
