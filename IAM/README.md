@@ -14,6 +14,7 @@ https://docs.aws.amazon.com/en_us/IAM/latest/UserGuide/id.html
 Best practice:
 - Activate MFA, Strogn password, Disable or delete the access keys associated with the root user, create IAM users for other tasks. 
 - Create an IAM admin user once the AWS Root user has been created, and use this admin user instead of root user.
+- Least privilege is a standard security principle that advises you to grant only the necessary permissions to do a particular job and nothing more.
 
 # IAM 
 
@@ -36,10 +37,10 @@ An IAM group is a collection of users. All users in the group inherit the permis
 IAM role is an indentiy that can be assumed by someone (external identity provider, AWS account) or something (AWS Servie) who needs temporary access to AWS Credential to perform an API call in an AWS account. 
 External identity provider can be manage with AWS IAM Identity Center. 
 Each IAM role comes with an ARN: Amazon Resource Name
+## attribute-based 
 
 # IAM Policies
 To manage access to identities (authentication) and provide permissions (authorization) to AWS services and resources.
-Least privilege is a standard security principle that advises you to grant only the necessary permissions to do a particular job and nothing more.
 permission over resources with specific conditions. Permissiones are assigned to users. 
 
 ## Permissions policies 
