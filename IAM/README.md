@@ -44,6 +44,12 @@ SCPs specify the maximum permissions for an account, or a group of accounts, cal
 #### Session policy
 Session policies limit the permissions that the role or user's identity-based policies grant to the session
 
+# Authorization model
+
+#### Role-based access control
+#### Attribute-based access control
+Attribute-based access control (ABAC) is an authorization strategy that defines permissions based on attributes. In AWS, these attributes are called tags. Tags can be attached to IAM principals (users or roles) and to AWS resources.  ABAC is helpful in environments that are growing rapidly and helps with situations where policy management becomes cumbersome.
+
 # Principal
 As a best practice, do not use your root user credentials for your daily work. Instead, create IAM entities (users and roles). You can also support federated users or programmatic access to allow an application to access your AWS account.
 
