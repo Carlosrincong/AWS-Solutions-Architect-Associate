@@ -20,26 +20,6 @@ Best practice:
 
 AWS Identity and Access Management (IAM) is an AWS service that helps you manage access to your AWS account and resources.
 
-## IAM User 
-An IAM user represents a person or service that interacts with AWS. You define the user in your AWS account. Any activity done by that user is billed to your account. When you create a user, that user can sign in to gain access to the AWS resources inside your account. When you create a user, you can provide them with credentials for Console of AWS CLI/AWS SDK
-
-- BP: You can group IAM users and attach permissions at the group level.
-- consider managing employee identity information through an identity provider (IdP). Using an IdP, whether it's with an AWS service such as AWS IAM Identity Center (successor to AWS Single Sign-On) or a third-party identity provider, provides a single source of truth for all identities in your organization. Now You can use IAM roles to provide permissions to identities that are federated from your IdP
-- credentials (console, AWS CLI & AWS SDK) associated to.
-
-## IAM Groups
-An IAM group is a collection of users. All users in the group inherit the permissions assigned to the group. 
-1. Groups can have many users.
-2. Users can belong to many groups.
-3. Groups cannot belong to groups.
-
-## IAM role (role-based access)
-IAM role is an indentiy that can be assumed by someone (external identity provider, AWS account) or something (AWS Servie) who needs temporary access to AWS Credential to perform an API call in an AWS account. 
-External identity provider can be manage with AWS IAM Identity Center. 
-Each IAM role comes with an ARN: Amazon Resource Name
-## attribute-based 
-
-
 # IAM Policies
 To manage access to identities (authentication) and provide permissions (authorization) to AWS services and resources.
 permission over resources can comes with specific conditions if you want. Permissiones are assigned to **Principals** or **resources** to do **actions** over **resources** or by **users**. 
@@ -63,6 +43,31 @@ This sets the maximum permissions that an identity-based policy can grant to an 
 SCPs specify the maximum permissions for an account, or a group of accounts, called an organizational unit (OU). 
 #### Session policy
 Session policies limit the permissions that the role or user's identity-based policies grant to the session
+
+# Principal
+As a best practice, do not use your root user credentials for your daily work. Instead, create IAM entities (users and roles). You can also support federated users or programmatic access to allow an application to access your AWS account.
+
+#### AWS Account
+When you use an AWS account identifier as the principal in a policy, you delegate authority to the account.
+#### IAM User
+An IAM user represents a person or service that interacts with AWS. You define the user in your AWS account. Any activity done by that user is billed to your account. When you create a user, that user can sign in to gain access to the AWS resources inside your account. When you create a user, you can provide them with credentials for Console of AWS CLI/AWS SDK
+
+- BP: You can group IAM users and attach permissions at the group level.
+- consider managing employee identity information through an identity provider (IdP). Using an IdP, whether it's with an AWS service such as AWS IAM Identity Center (successor to AWS Single Sign-On) or a third-party identity provider, provides a single source of truth for all identities in your organization. Now You can use IAM roles to provide permissions to identities that are federated from your IdP
+- credentials (console, AWS CLI & AWS SDK) associated to.
+#### Federated User
+You can use IAM identity providers instead of creating IAM users in your AWS account. With an identity provider (IdP), you can manage your user identities outside AWS and give these external user identities permissions to use AWS resources in your account. IAM supports SAML-based IdPs and web identity providers, such as Login with Amazon, Amazon Cognito, Facebook, or Google. 
+#### IAM Role
+IAM role is an indentiy that can be assumed by someone (external identity provider, AWS account) or something (AWS Servie) who needs temporary access to AWS Credential to perform an API call in an AWS account. 
+External identity provider can be manage with AWS IAM Identity Center. 
+Each IAM role comes with an ARN: Amazon Resource Name
+#### AWS Service
+IAM roles that can be assumed by an AWS service are called service roles.
+#### IAM Groups
+An IAM group is a collection of users. All users in the group inherit the permissions assigned to the group. 
+1. Groups can have many users.
+2. Users can belong to many groups.
+3. Groups cannot belong to groups.
 
 
 ## Permissions policies 
