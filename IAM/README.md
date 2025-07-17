@@ -45,3 +45,11 @@ permission over resources with specific conditions. Permissiones are assigned to
 
 ## Permissions policies 
 This is a collection of permissions, mostly managed by AWS or created by users.
+## ------------------
+
+When you have an organization that spans multiple AWS accounts, you need to manage access to all the AWS accounts centrally via identity federation because users and groups are not scalable. 
+
+# Credentials
+- User name and password: You should define a password policy for all of your IAM users to enforce strong password
+- MFA (Multi-factor authentication) is an additional layer of security for accessing AWS services.
+- Access Keys (access key ID and a secret key):  to make programmatic calls to AWS using the AWS CLI or the AWS SDKs.
