@@ -39,11 +39,31 @@ External identity provider can be manage with AWS IAM Identity Center.
 Each IAM role comes with an ARN: Amazon Resource Name
 ## attribute-based 
 
-If the identity-based policy allows a certain action but the resource-based policy does not, the result will be a deny.
 
 # IAM Policies
 To manage access to identities (authentication) and provide permissions (authorization) to AWS services and resources.
-permission over resources can comes with specific conditions if you want. Permissiones are assigned to **Principals** to do **actions** over **resources**.
+permission over resources can comes with specific conditions if you want. Permissiones are assigned to **Principals** or **resources** to do **actions** over **resources** or by **users**. 
+- If the identity-based policy allows a certain action but the resource-based policy does not, the result will be a deny.
+- IAM user, role, or federated user is denied access by default, they must be explicitly allowed to perform an action
+- If a permissions boundary, AWS Organizations SCP, or session policy is present, it might override the allow with an implicit deny.
+
+There are six types of IAM Policies:
+## Grants
+### IAM Policies (Identity-based)
+Identity-based policies are managed and inline policies attached to IAM identities (users, groups to which users belong, or roles).
+### Resource-based policies
+Resource-based policies grant permissions to the principal that is specified in the policy; hence, the principal policy element is required. 
+### ACLs
+ACLs are **cross-account** permissions policies that grant permissions to the specified principal. ACLs cannot grant permissions to entities within the same account.
+
+## Guardrails
+### Permissions boundary
+This sets the maximum permissions that an identity-based policy can grant to an IAM entity. 
+### AWS Organizations SCPS
+SCPs specify the maximum permissions for an account, or a group of accounts, called an organizational unit (OU). 
+#### Session policy
+Session policies limit the permissions that the role or user's identity-based policies grant to the session
+
 
 ## Permissions policies 
 This is a collection of permissions, mostly managed by AWS or created by users.
