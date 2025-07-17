@@ -39,12 +39,15 @@ External identity provider can be manage with AWS IAM Identity Center.
 Each IAM role comes with an ARN: Amazon Resource Name
 ## attribute-based 
 
+If the identity-based policy allows a certain action but the resource-based policy does not, the result will be a deny.
+
 # IAM Policies
 To manage access to identities (authentication) and provide permissions (authorization) to AWS services and resources.
-permission over resources with specific conditions. Permissiones are assigned to users. 
+permission over resources can comes with specific conditions if you want. Permissiones are assigned to **Principals** to do **actions** over **resources**.
 
 ## Permissions policies 
 This is a collection of permissions, mostly managed by AWS or created by users.
+
 ## ------------------
 
 When you have an organization that spans multiple AWS accounts, you need to manage access to all the AWS accounts centrally via identity federation because users and groups are not scalable. 
