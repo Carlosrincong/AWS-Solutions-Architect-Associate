@@ -20,14 +20,18 @@ Best practice:
 
 AWS Identity and Access Management (IAM) is an AWS service that helps you manage access to your AWS account and resources.
 
+# Credentials
+- User name and password: You should define a password policy for all of your IAM users to enforce strong password
+- MFA (Multi-factor authentication) is an additional layer of security for accessing AWS services.
+- Access Keys (access key ID and a secret key):  to make programmatic calls to AWS using the AWS CLI or the AWS SDKs.
+
 # IAM Policies
 To manage access to identities (authentication) and provide permissions (authorization) to AWS services and resources.
 permission over resources can comes with specific conditions if you want. Permissiones are assigned to **Principals** or **resources** to do **actions** over **resources** or by **users**. 
 - If the identity-based policy allows a certain action but the resource-based policy does not, the result will be a deny.
 - IAM user, role, or federated user is denied access by default, they must be explicitly allowed to perform an action
 - If a permissions boundary, AWS Organizations SCP, or session policy is present, it might override the allow with an implicit deny.
-
-There are six types of IAM Policies:
+- There are six types of IAM Policies:
 ## Grants
 ### IAM Policies (Identity-based)
 Identity-based policies are managed and inline policies attached to IAM identities (users, groups to which users belong, or roles).
@@ -52,7 +56,6 @@ Attribute-based access control (ABAC) is an authorization strategy that defines 
 
 # Principal
 As a best practice, do not use your root user credentials for your daily work. Instead, create IAM entities (users and roles). You can also support federated users or programmatic access to allow an application to access your AWS account.
-
 #### AWS Account
 When you use an AWS account identifier as the principal in a policy, you delegate authority to the account.
 #### IAM User
@@ -75,14 +78,11 @@ An IAM group is a collection of users. All users in the group inherit the permis
 2. Users can belong to many groups.
 3. Groups cannot belong to groups.
 
-
 ## Permissions policies 
 This is a collection of permissions, mostly managed by AWS or created by users.
-
 #### NotPrincipal
 lets you specify an exception to a list of principals. you can deny access to all principals except the one named in the NotPrincipal element. It is strongly recommend that you do not use NotPrincipal in the same policy statement as "Effect": "Allow". Doing so allows all principals except the one named in the NotPrincipal element access to your resources. By doing this, you might grant access to anonymous (unauthenticated) users.
 - use NotPrincipal in the same policy statement as "Effect": "Deny"
-
 #### NotAction
 - Dont use NotAction in the same policy statement as "Effect": "Allow".
 - You can use the NotAction element in a statement with "Effect": "Deny" to deny access to all of the listed resources except for the actions specified in the NotAction element. 
@@ -92,11 +92,13 @@ lets you specify an exception to a list of principals. you can deny access to al
 - You should never use the NotResource element with the "Effect": "Allow" and "Action": "*" elements together. This statement is very dangerous because it allows all actions in AWS on all resources except the resource specified in the policy.
 
 
+
+# AWS Security Token Service (AWS STS)
+- Temporary security credentials are required when assuming an IAM role, and they work almost identically to the long-term access key credentials that your IAM users can use
+- grant temporary access and limit access to users.
+- Use case: federation identities, cross-account and roles for EC2
+
+
 ## ------------------
 
 When you have an organization that spans multiple AWS accounts, you need to manage access to all the AWS accounts centrally via identity federation because users and groups are not scalable. 
-
-# Credentials
-- User name and password: You should define a password policy for all of your IAM users to enforce strong password
-- MFA (Multi-factor authentication) is an additional layer of security for accessing AWS services.
-- Access Keys (access key ID and a secret key):  to make programmatic calls to AWS using the AWS CLI or the AWS SDKs.
