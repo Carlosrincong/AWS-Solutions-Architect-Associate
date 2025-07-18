@@ -79,6 +79,19 @@ An IAM group is a collection of users. All users in the group inherit the permis
 ## Permissions policies 
 This is a collection of permissions, mostly managed by AWS or created by users.
 
+#### NotPrincipal
+lets you specify an exception to a list of principals. you can deny access to all principals except the one named in the NotPrincipal element. It is strongly recommend that you do not use NotPrincipal in the same policy statement as "Effect": "Allow". Doing so allows all principals except the one named in the NotPrincipal element access to your resources. By doing this, you might grant access to anonymous (unauthenticated) users.
+- use NotPrincipal in the same policy statement as "Effect": "Deny"
+
+#### NotAction
+- Dont use NotAction in the same policy statement as "Effect": "Allow".
+- You can use the NotAction element in a statement with "Effect": "Deny" to deny access to all of the listed resources except for the actions specified in the NotAction element. 
+#### NotResource 
+- Be careful using the NotResource element and "Effect": "Allow" in the same statement or in a different statement within a policy. 
+- Using the NotResource element and "Effect": "Deny" in the same statement denies services and resources that are not explicitly listed in the policy.
+- You should never use the NotResource element with the "Effect": "Allow" and "Action": "*" elements together. This statement is very dangerous because it allows all actions in AWS on all resources except the resource specified in the policy.
+
+
 ## ------------------
 
 When you have an organization that spans multiple AWS accounts, you need to manage access to all the AWS accounts centrally via identity federation because users and groups are not scalable. 
