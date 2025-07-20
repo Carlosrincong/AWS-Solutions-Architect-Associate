@@ -67,9 +67,9 @@ An IAM user represents a person or service that interacts with AWS. You define t
 - consider managing employee identity information through an identity provider (IdP). Using an IdP, whether it's with an AWS service such as AWS IAM Identity Center (successor to AWS Single Sign-On) or a third-party identity provider, provides a single source of truth for all identities in your organization. Now You can use IAM roles to provide permissions to identities that are federated from your IdP
 - credentials (console, AWS CLI & AWS SDK) associated to.
 #### Federated User
-You can use IAM identity providers instead of creating IAM users in your AWS account. With an identity provider (IdP), you can manage your user identities outside AWS and give these external user identities permissions to use AWS resources in your account. IAM supports SAML-based IdPs and web identity providers, such as Login with Amazon, Amazon Cognito, Facebook, or Google.  AWS supports commonly used open identity standards, including Security Assertion Markup Language 2.0 (SAML 2.0), Open ID Connect (OIDC), and OAuth 2.0.
-- IAM Identity Center: Single sing-on to AWS Accounts
-- AWS Cognito: Access to web and mobile apps
+You can use IAM identity providers instead of creating IAM users in your AWS account. With an identity provider (IdP), you can manage your user identities outside AWS and give these external user identities permissions to use AWS resources in your account. IAM supports:
+- IAM Identity Center: Single sing-on to AWS Accounts, including Security Assertion Markup Language 2.0 (SAML 2.0), Open ID Connect (OIDC), and OAuth 2.0.
+- AWS Cognito: Access to web and mobile apps, such as Login with Amazon, Amazon Cognito, Facebook, Google, or any OpenID Connect-compatible identity provider.
 #### IAM Role
 IAM role is an indentiy that can be assumed by someone (external identity provider, AWS account) or something (AWS Servie) who needs temporary access to AWS Credential to perform an API call in an AWS account. 
 External identity provider can be manage with AWS IAM Identity Center. 
