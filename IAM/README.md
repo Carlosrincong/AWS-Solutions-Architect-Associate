@@ -97,6 +97,9 @@ lets you specify an exception to a list of principals. you can deny access to al
 ###  IAM policy simulator
 - Test policies that are attached to IAM users, groups, or roles in your AWS account.
 - Identify which specific statement in a policy results in allowing or denying access to a particular resource or action.
+### Access History
+- IAM provides last accessed information to help you identify unused permissions, refine your policies, and allow access to only the services and actions that your IAM entities use.
+- There are two types: AWS service information and allowed action information. 
 
 # AWS Security Token Service (AWS STS)
 - Temporary security credentials are required when assuming an IAM role, and they work almost identically to the long-term access key credentials that your IAM users can use
