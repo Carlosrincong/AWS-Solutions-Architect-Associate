@@ -107,6 +107,7 @@ lets you specify an exception to a list of principals. you can deny access to al
 - Use case: federation identities, cross-account and roles for EC2
 
 
-## ------------------
+# CloudTrail
 
-When you have an organization that spans multiple AWS accounts, you need to manage access to all the AWS accounts centrally via identity federation because users and groups are not scalable. 
+AWS CloudTrail provides a record of actions taken by an IAM user or role.
+CloudTrail also logs successful and failed sign-in attempts for IAM users and federated users. 
