@@ -68,7 +68,7 @@ An IAM user represents a person or service that interacts with AWS. You define t
 - credentials (console, AWS CLI & AWS SDK) associated to.
 #### Federated User
 You can use IAM identity providers instead of creating IAM users in your AWS account. With an identity provider (IdP), you can manage your user identities outside AWS and give these external user identities permissions to use AWS resources in your account. IAM supports:
-- IAM Identity Center: Single sing-on to AWS Accounts, including Security Assertion Markup Language 2.0 (SAML 2.0), Open ID Connect (OIDC), and OAuth 2.0.
+- IAM Identity Center: Single sing-on to AWS Accounts, including Security Assertion Markup Language 2.0 (SAML 2.0), Open ID Connect (OIDC), and OAuth 2.0.  IAM Identity Center makes it easy to centrally manage federated access to multiple AWS accounts and business applications and provide users with single sign-on access to all their assigned accounts and applications from one place.
 - AWS Cognito: Access to web and mobile apps, such as Login with Amazon, Amazon Cognito, Facebook, Google, or any OpenID Connect-compatible identity provider.
 #### IAM Role
 IAM role is an indentiy that can be assumed by someone (external identity provider, AWS account) or something (AWS Servie) who needs temporary access to AWS Credential to perform an API call in an AWS account. 
