@@ -94,8 +94,9 @@ lets you specify an exception to a list of principals. you can deny access to al
 - Be careful using the NotResource element and "Effect": "Allow" in the same statement or in a different statement within a policy. 
 - Using the NotResource element and "Effect": "Deny" in the same statement denies services and resources that are not explicitly listed in the policy.
 - You should never use the NotResource element with the "Effect": "Allow" and "Action": "*" elements together. This statement is very dangerous because it allows all actions in AWS on all resources except the resource specified in the policy.
-
-
+###  IAM policy simulator
+- Test policies that are attached to IAM users, groups, or roles in your AWS account.
+- Identify which specific statement in a policy results in allowing or denying access to a particular resource or action.
 
 # AWS Security Token Service (AWS STS)
 - Temporary security credentials are required when assuming an IAM role, and they work almost identically to the long-term access key credentials that your IAM users can use
