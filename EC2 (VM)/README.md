@@ -11,7 +11,14 @@ For high availability, consider using at least two EC2 instances in two separate
 
 You must define the following: 
 - Hardware specifications: 
-    - Instance type: CPU, Memory (RAM) and GPU (optional). Instance families: General purpose, Compute optimized, Memory optimized, Accelerated computing, Storage optimized and HPC optimized.
+    - Instance type: CPU, Memory (RAM) and GPU (optional). 
+    Instance families: 
+        - General purpose: Balanced requirements
+        - Compute optimized (c): CPU intensive, high performance processors, media trascoding, batch processing workloads, dedicated gaming servers or machine learning.
+        - Memory optimized (r): process large datset in memory (RAM), databases, cache store, in-memory databases optimized for BI
+        - Accelerated computing
+        - Storage optimized (i, g, h): access large dataset on local storage, OLTP systems, databases, in-memory databases, data warehouse, file systems
+        - HPC optimized
     - network (VPC)
     - storage (EBS Volume, EFS and Lifecycle Manager)
 - Logical configurations: 
