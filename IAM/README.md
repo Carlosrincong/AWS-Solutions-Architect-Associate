@@ -66,6 +66,7 @@ An IAM user represents a person or service that interacts with AWS. You define t
 - BP: You can group IAM users and attach permissions at the group level.
 - consider managing employee identity information through an identity provider (IdP). Using an IdP, whether it's with an AWS service such as AWS IAM Identity Center (successor to AWS Single Sign-On) or a third-party identity provider, provides a single source of truth for all identities in your organization. Now You can use IAM roles to provide permissions to identities that are federated from your IdP
 - credentials (console, AWS CLI & AWS SDK) associated to.
+- you can create an Alias for an IAM User to customize the sign up or if you dont wanna show the account id.
 #### Federated User
 You can use IAM identity providers instead of creating IAM users in your AWS account. With an identity provider (IdP), you can manage your user identities outside AWS and give these external user identities permissions to use AWS resources in your account. IAM supports:
 - IAM Identity Center: Single sing-on to AWS Accounts, including Security Assertion Markup Language 2.0 (SAML 2.0), Open ID Connect (OIDC), and OAuth 2.0.  IAM Identity Center makes it easy to centrally manage federated access to multiple AWS accounts and business applications and provide users with single sign-on access to all their assigned accounts and applications from one place.
@@ -108,6 +109,5 @@ lets you specify an exception to a list of principals. you can deny access to al
 
 
 # CloudTrail
-
 AWS CloudTrail provides a record of actions taken by an IAM user or role.
 CloudTrail also logs successful and failed sign-in attempts for IAM users and federated users. 
