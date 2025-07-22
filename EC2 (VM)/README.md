@@ -11,14 +11,15 @@ For high availability, consider using at least two EC2 instances in two separate
 
 You must define the following: 
 - Hardware specifications: 
-    - Instance type: CPU, Memory and GPU (optional). Instance families: General purpose, Compute optimized, Memory optimized, Accelerated computing, Storage optimized and HPC optimized.
+    - Instance type: CPU, Memory (RAM) and GPU (optional). Instance families: General purpose, Compute optimized, Memory optimized, Accelerated computing, Storage optimized and HPC optimized.
     - network (VPC)
-    - storage (EBS Volume and Lifecycle Manager)
+    - storage (EBS Volume, EFS and Lifecycle Manager)
 - Logical configurations: 
     - Networking location (VPC)
     - firewall rules (Security Group)
     - authentication (Key Pairs)
-    - operating system (AMI)
+    - operating system or AMI: Linux, Windows or MacOS
+    - User data: script which run once the instance is first started. Execute on the first launch ot the instance.
 
 You can scale capacity as needed, both up and down. This means that if you need more memory, processing, or storage, you can add it.
 
