@@ -53,12 +53,14 @@ AMIs can comes from:
 # Pricing
 We recommend Savings Plans over Reserved Instances
 
-- On-Demand instances: only pay the specified hourly rates for the instance that you use.
-- Spot instances: Users with fault-tolerant or stateless workloads    
-- Saving plans:  low usage prices for a 1-year or 3-year term commitment to a consistent amount of usage
-- Reserved instances
-- Dedicated hosts
+- On-Demand instances: only pay the specified hourly rates for the instance that you use. Recommended for short-term and un-interrupted workloads.
+- Spot instances (---): Users with fault-tolerant, short workloads or stateless workloads. Instance can be terminated in any time. Use case: batch jobs, Data analysis, image processing. No for critical jobs or databases.    
+- Saving plans (--):  low usage prices for a 1-year or 3-year term commitment to a consistent amount of usage. You chooser certain instance type and region.
+- Reserved instances (-): long workloads. You reserve for a period (1 or 3 years) specific instance attribute such as: tenancy, instance type, regions or zone, OS, so on. You can buy or sell the reservation. You can choose an convertible reserved instance.
+- Dedicated hosts (+++): book an entire physical server. You control instance placement. Compliance requirements or complicated licensing model. There are two options: Ondemand or reserved.
+- Dedicated instances (+): may share your hardware with other instances.
 - You are not billed if an instance is in a stopped state.
+- A best practice is combine regional reserved instances and saving plans
 
 ## Availability
 
