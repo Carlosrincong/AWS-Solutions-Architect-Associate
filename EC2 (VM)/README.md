@@ -54,7 +54,11 @@ AMIs can comes from:
 We recommend Savings Plans over Reserved Instances
 
 - On-Demand instances: only pay the specified hourly rates for the instance that you use. Recommended for short-term and un-interrupted workloads.
-- Spot instances (---): Users with fault-tolerant, short workloads or stateless workloads. Instance can be terminated in any time. Use case: batch jobs, Data analysis, image processing. No for critical jobs or databases.    
+- Spot instances (---): Users with fault-tolerant, short workloads or stateless workloads. Instance can be terminated in any time. 
+    - Use case: batch jobs, Data analysis, image processing. No for critical jobs or databases.
+    - To get a Spot Instance you must to set a max spot price you are able to pay. And when the price is less than that price you get the instance. when the price is greater than the max spot price, The instance will stop/terminate within 2 minutes. 
+    - If you want to cancel/terminate an spot instance, first you must to cancel the spot request and then terminate the spot instance.
+    - Spot fleet = spot instances + On demand instances (optional). Allow us to request instances automatically at the lowes price.
 - Saving plans (--):  low usage prices for a 1-year or 3-year term commitment to a consistent amount of usage. You chooser certain instance type and region.
 - Reserved instances (-): long workloads. You reserve for a period (1 or 3 years) specific instance attribute such as: tenancy, instance type, regions or zone, OS, so on. You can buy or sell the reservation. You can choose an convertible reserved instance.
 - Dedicated hosts (+++): book an entire physical server. You control instance placement. Compliance requirements or complicated licensing model. There are two options: Ondemand or reserved.
