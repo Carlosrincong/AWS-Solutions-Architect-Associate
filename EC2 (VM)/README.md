@@ -102,3 +102,6 @@ Components:
     - target tracking scaling: If your application scales based on average CPU utilization, average network utilization (in or out), or request count, then this scaling policy type is the one to use. All you need to provide is the target value to track, and it automatically creates the required CloudWatch alarms.
 
 ![autoscaling](/img/auto_scaling_group.png)
+
+# Networking 
+- Allocate and associate an IP Address to an instances if you want a fix public ip address 
