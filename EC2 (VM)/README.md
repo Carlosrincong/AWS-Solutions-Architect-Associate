@@ -105,3 +105,9 @@ Components:
 
 # Networking 
 - Allocate and associate an IP Address to an instances if you want a fix public ip address 
+
+# Placement groups
+Types:
+- Cluster: all instance are in the same AZ for low latency (10 Gps). There is no hight availability. Use case: Bid data jobs, Application that needs extremely low latency and high networkin throughput
+- Spread: minimize the failure risk with the instances in different AZ. Limited to 7 instances per ZA per Placement group. Use case: application that maximize high availability and critical applications.
+- Partition: each partition represents a rack in AWS infrastructure. Limited to 7 partition per AZ. Partitions can be spread across multipla EZ in the same region. Each partition is phyiscaly isolated from other partition. Use case (big data application): HDFS, HBase, Cassandra and Kafka.
