@@ -117,3 +117,17 @@ Represents a virtual network card or a network interface. This is attached to on
 Each ENI contains:
 - Public IPv4
 - Private IPv4 (auto or custom) and their DNS 
+- Security group
+
+# Hibernate
+- The in-memory (RAM) state is preserved
+- The boot instance is faster
+- The RAM state is written to a file in the root EBS Volume
+- EBS volume must be encrypted
+- RAM size must be less tah 150 GB
+- EC2 instance can not be hiberanted more than 60 days
+
+Use case:
+- Long runnig processing
+- Saving the RAM state
+- Services that take time to initialize
