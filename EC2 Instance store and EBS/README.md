@@ -30,8 +30,9 @@ Use case:
 - Data that is replicated across a fleet of instances, such as a load-balanced pool of web servers
 
 # Amazon EBS
-Amazon Elastic Block Store is block-level storage that you can attach to an Amazon EC2 instance like an external drive. 
+Amazon Elastic Block Store is block-level storage that you can attach to an Amazon EC2 instance like an external drive (not a physical drive). 
 it is automatically replicated in its Availability Zone to prevent data loss from single points of failure
+EBS Volume is a zonal resource, so you can not attach the volume to an instance in another zone. to do that, you need an snapshot of the EBS Volume and create the EBS Volume based on that snapshot.
 Amazon EBS provides the ability to create backups of any EBS volume.
 EBS snapshots are incremental backups that only save the blocks on the volume that have changed after your most recent snapshot. Snapshots are stored redundantly in multiple Availability Zones using Amazon S3. 
 Snapshot is a good way to take point-in-time backups of your data. 
@@ -39,7 +40,7 @@ The same snapshot can be used to instantiate as many volumes as you want.
 EBS can only be attahced to EC2 instances
 For throughput and transaction-intensive workloads at any scale. 
 AWS recommends Amazon EBS for data that must be quickly accessible and requires long-term persistence.
-persist independently from the life of the instance
+persist independently from the life of the instance and after termination
 With AWS Backup, you can centralize and automate data protection across multiple Amazon EBS volumes
 
 Features:
