@@ -64,8 +64,13 @@ Use case:
 - File systems on top of EBS
 
 Types:
-- SSD: frequent read/write operations with small I/O size. Transactional workloads, such as databases, virtual desktops, and boot volumes 
-- HDD: large streaming workloads. throughput-intensive workloads, such as MapReduce and log processing. 
+- SSD: frequent read/write operations with small I/O size. Transactional workloads, such as databases, virtual desktops, and boot volumes. 
+    - gp2/gp3: Balance price and performance for a wide variety of workloads. gp3 is the newer generation.
+    - io1/io2 Block express: highest  performance for mission-critical low-latency or high-throughput workloads. Supports EBS multi-attach.
+- HDD: large streaming workloads. throughput-intensive workloads, such as MapReduce and log processing. Big data data warehouses. 
+    - st 1: low cost, Frequently accessed, throughput intensive workloads.
+    - sc 1: lowest cost for less frequently access or cold data.
+Only SSD can be used as boot volumes (where the OS will be running).
 
 Pricing:
 Pricing for EBS volumes is based on the volume type, provisioned volume size, and the provisioned IOPS and throughput performance. EBS volume pricing varies based on the Availability Zone where it resides. The pricing for Amazon EBS snapshots is based on the actual amount of storage space that you use.
