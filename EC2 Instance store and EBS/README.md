@@ -22,12 +22,13 @@ This storage is located on disks that are physically attached to the host comput
 This ties the lifecycle of the data to the lifecycle of the EC2 instance.
 Instance store is ideal if you host applications that replicate data to other EC2 instances or cluster-based workloads
 EBS can only be attahced to EC2 instances
-An instance store provides submillisecond latencies between the EC2 instance and the storage.
+An instance store provides submillisecond latencies (high performance) between the EC2 instance and the storage.
 Instance store type depends on the type of the EC2 instance
 
 Use case:
 - Temporary storage of information that changes frequently, such as buffers, caches, scratch data, and other temporary content
 - Data that is replicated across a fleet of instances, such as a load-balanced pool of web servers
+- Better I/O and disk performance 
 
 # Amazon EBS
 Amazon Elastic Block Store is block-level storage that you can attach to an Amazon EC2 instance like an external drive (not a physical drive). 
