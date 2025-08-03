@@ -25,7 +25,7 @@ You must define the following:
     - Networking location (VPC)
     - firewall rules (Security Group)
     - authentication (Key Pairs)
-    - operating system or AMI: Public AMI (Linux, Windows or MacOS), your own AMI or Marketplace AMI. AMI is a zonal resource and can be copied between AZs.
+    - operating system or AMI: Public AMI (Linux, Windows or MacOS), your own AMI or Marketplace AMI. AMI is a zonal resource and can be copied between AZs. AMIs are regional resources.
     - User data: script which run once the instance is first started. Execute on the first launch ot the instance.
 
 You can scale capacity as needed, both up and down. This means that if you need more memory, processing, or storage, you can add it.

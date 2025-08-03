@@ -49,7 +49,7 @@ Features:
 - Distinct: The external drive is separate from the computer. That means that if an accident occurs and the computer goes down, you still have your data on your external drive. The same is true for EBS volumes.
 - Size-limited: You’re limited to the size of the external drive, because it has a fixed limit to how scalable it can be.
 - 1-to-1 connection: Most external drives can only be connected with one computer at a time. 
-- Encryption of data in transit and at rest. Snapshots and volumes created from snapshots are encrypted. Encryption has minimal impact on latency.
+- Encryption of data in transit and at rest. Snapshots and volumes created from snapshots are encrypted. Encryption has minimal impact on latency. If you want encrypt an unencrypted and running volume, you must to take a snapshot and then copy that snapshot enabling encryption. Finally, boot the instance with this encrypted copy.
 
 You can scale EBS volumes in two ways:
 - Increase the volume size only if it doesn’t increase above the maximum size limit
