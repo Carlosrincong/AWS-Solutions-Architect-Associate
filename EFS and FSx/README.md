@@ -40,14 +40,16 @@ You pay only for the storage used by your file system. No minimum fee and no set
 
 Features:
 - Supports authentication, authorization, and encryption capabilities to help you meet your security and compliance requirements. 
-- With EFS lifecycle management policies enabled, files automatically move from Amazon EFS Standard storage to EFS Standard-IA storage, or from Amazon EFS One Zone storage to EFS One Zone-IA storage. Lifecycle management reduces storage costs by up to 92 percent.
+- Storage tiers: With EFS lifecycle management policies enabled, files automatically move from Amazon EFS Standard storage to EFS Standard-IA storage, or from Amazon EFS One Zone storage to EFS One Zone-IA storage. Lifecycle management reduces storage costs by up to 92 percent.
 - Security: Security groups and IAM 
 - On-premise can access through VPN or Direct connect to EFS
+- Encryption at rest with KMS
 
 Use case:
 - Migrate enterprise applications from on premises to the AWS Cloud
 - machine learning and big data analytics workloads. 
 - Media workflows often depend on shared storage to manipulate large files. Example workflows include video editing, studio production, broadcast processing, sound design, and rendering. 
+- Content management, web serving, wordpress. 
 
 Modes:
 - The default General Purpose performance mode is ideal for latency-sensitive use cases
