@@ -28,7 +28,7 @@ A way to strengthen the health check is to create a **monitoring webpage**, such
 
 - rules: source IP address of the client. target group to send the traffic to
 - listeners: The client connects to the listener. This is often called client side. There can be many listeners for a single load balancer.
-- target groups: This is where you define the type of backend you want to direct traffic to. Also, a health check must be defined for each target group. 
+- target groups: This is where you define the type of backend you want to direct traffic to. Also, a health check must be defined for each target group. You can link the load balancer to a security group instead of link to an instance.
 
 ## Types of load balancers
 
