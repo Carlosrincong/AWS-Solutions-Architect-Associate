@@ -66,7 +66,7 @@ Use case:
 Types:
 - SSD: frequent read/write operations with small I/O size. Transactional workloads, such as databases, virtual desktops, and boot volumes. 
     - gp2/gp3: Balance price and performance for a wide variety of workloads. gp3 is the newer generation.
-    - io1/io2 Block express: highest  performance for mission-critical low-latency or high-throughput workloads. Supports EBS multi-attach.
+    - io1/io2 Block express: highest  performance for mission-critical low-latency or high-throughput workloads. Supports EBS multi-attach, that means more than one instance in the same AZ can be attached with the same EBS volume, max 16 instances.
 - HDD: large streaming workloads. throughput-intensive workloads, such as MapReduce and log processing. Big data data warehouses. 
     - st 1: low cost, Frequently accessed, throughput intensive workloads.
     - sc 1: lowest cost for less frequently access or cold data.
