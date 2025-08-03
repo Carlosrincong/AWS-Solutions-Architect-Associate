@@ -44,6 +44,7 @@ Features:
 - Security: Security groups and IAM 
 - On-premise can access through VPN or Direct connect to EFS
 - Encryption at rest with KMS
+- Used by Linux instances.
 
 Use case:
 - Migrate enterprise applications from on premises to the AWS Cloud

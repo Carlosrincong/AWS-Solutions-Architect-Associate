@@ -45,7 +45,7 @@ persist independently from the life of the instance and after termination
 With AWS Backup, you can centralize and automate data protection across multiple Amazon EBS volumes
 
 Features:
-- Detachable: You can detach an EBS volume from one EC2 instance and attach it to another EC2 instance in the same Availability Zone to access the data on it.
+- Detachable: You can detach an EBS volume from one EC2 instance and attach it to another EC2 instance in the same Availability Zone to access the data on it. If you want migrate to another AZ you need to take a snapshot, then restore the snapshot to another AZ. 
 - Distinct: The external drive is separate from the computer. That means that if an accident occurs and the computer goes down, you still have your data on your external drive. The same is true for EBS volumes.
 - Size-limited: You’re limited to the size of the external drive, because it has a fixed limit to how scalable it can be.
 - 1-to-1 connection: Most external drives can only be connected with one computer at a time. 
