@@ -28,7 +28,7 @@ A way to strengthen the health check is to create a **monitoring webpage**, such
 
 - rules: source IP address of the client. target group to send the traffic to
 - listeners: The client connects to the listener. This is often called client side. There can be many listeners for a single load balancer.
-- target groups: This is where you define the type of backend you want to direct traffic to. Also, a health check must be defined for each target group. You can link the load balancer to a security group instead of link to an instance. You can use the route tables to redirect traffic to different target group: based on path in URL (ex.com/user, ex.com/orders), based on hostname (a.ex.com, b.ex.com) or based on query string headers (ex.com/user=125&order=5)
+- target groups: This is where you define the type of backend you want to direct traffic to. Also, a health check must be defined for each target group. You can link an Instance to a LB´s security group instead of link to the load balancer. You can use the route tables to redirect traffic to different target group: based on path in URL (ex.com/user, ex.com/orders), based on hostname (a.ex.com, b.ex.com) or based on query string headers (ex.com/user=125&order=5)
     - EC2 Instances
     - ECS Task
     - Lmabda functions
@@ -56,10 +56,11 @@ A way to strengthen the health check is to create a **monitoring webpage**, such
 - TCP and User Datagram Protocol (UDP) connection based
 - Layer 4
 - Source IP preservation
-- Low latency
+- Ultra-Low latency and high performance (millions of request per seconds)
 - Sticky sessions: Routes requests from the same client to the same target.
-- Automatically provides a static IP address per Availability Zone (subnet).
+- Automatically provides a static IP address per Availability Zone (subnet), you can use an Elastic IP for each AZ.
 - DNS: Uses Amazon Route 53 to direct traffic to load balancer nodes in other zones.
+- Target group: EC2 Instances, IP addresses (private) or Application load balancer
 
 #### Gateway Load Balancer (GLB) 
 It provides a gateway for distributing traffic across multiple virtual appliances while scaling them up and down based on demand.
