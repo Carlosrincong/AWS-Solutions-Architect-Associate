@@ -70,6 +70,9 @@ It provides a gateway for distributing traffic across multiple virtual appliance
 - Higher availability for **third-party** virtual appliances
 - Can be monitored using CloudWatch metrics.
 - Connects internet gateways, virtual private clouds (VPCs), and other network resources over a private network.
+- Use case: Analyze network traffic with 3rd party security appliances
+- Uses the GENEVE protocol on port 6081
+- Target group: EC2 Instances or IP addresses (private)
 
 Gateway Load Balancer endpoints 
 - Gateway Load Balancers use Gateway Load Balancer endpoints to securely exchange traffic across VPC boundaries. 
