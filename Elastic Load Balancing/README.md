@@ -51,6 +51,7 @@ A way to strengthen the health check is to create a **monitoring webpage**, such
 - The Application Load Balancer has individual nodes running in each Availability Zone that are configured with the Application Load Balancer. 
 - Internal:  to balance loads between the layers of a multi-tier application
 - Extertnal: to balance loads inside the Amazon VPC
+- Cross-zone load balancing is enabled by default and can be disabled at the target group level. This load balancing means that every instance in each zone get the same percentage of traffic from the nodes of the load balancers 
 
 #### Network Load Balancer (NLB)
 - TCP and User Datagram Protocol (UDP) connection based
@@ -61,6 +62,7 @@ A way to strengthen the health check is to create a **monitoring webpage**, such
 - Automatically provides a static IP address per Availability Zone (subnet), you can use an Elastic IP for each AZ.
 - DNS: Uses Amazon Route 53 to direct traffic to load balancer nodes in other zones.
 - Target group: EC2 Instances, IP addresses (private) or Application load balancer
+- Cross-zone load balancing is disabled by default and can be enabled at the load balancer level
 
 #### Gateway Load Balancer (GLB) 
 It provides a gateway for distributing traffic across multiple virtual appliances while scaling them up and down based on demand.
@@ -73,6 +75,7 @@ It provides a gateway for distributing traffic across multiple virtual appliance
 - Use case: Analyze network traffic with 3rd party security appliances
 - Uses the GENEVE protocol on port 6081
 - Target group: EC2 Instances or IP addresses (private)
+- Cross-zone load balancing is disabled by default and can be enabled at the load balancer level
 
 Gateway Load Balancer endpoints 
 - Gateway Load Balancers use Gateway Load Balancer endpoints to securely exchange traffic across VPC boundaries. 
