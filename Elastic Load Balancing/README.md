@@ -14,6 +14,8 @@ Features
 - High availability: the load balancer's targets are deployed across multiple Availability Zones.
 - Scalability: scales to meet the demand of the incoming traffic.
 - This is a regional service
+- For secure connections use AWS Certificate Manager to manage certificates. With certificate you are able to establish SSL or TLS connections
+- SNI: Used to manage multiple certificates to connect with multiple domains in differents target groups, all behind the same Load balancer. SNI match the request to a domain with the correct Certificate, encrypt the traffic and send it to the correct target group.
 
 ### Health checks 
 HC to route traffic to only healthy EC2 instances. HC works at the Target group level.
@@ -27,7 +29,7 @@ A way to strengthen the health check is to create a **monitoring webpage**, such
 ### ELB components
 
 - rules: source IP address of the client. target group to send the traffic to
-- listeners: The client connects to the listener. This is often called client side. There can be many listeners for a single load balancer.
+- listeners: The client connects to the listener. This is often called client side. There can be many listeners for a single load balancer. in the listener configurarion you must define which target group forward the traffic. For HTTPS listener you must specify a default certificate from ACM (reccommended), IAM or imported.
 - target groups: This is where you define the type of backend you want to direct traffic to. Also, a health check must be defined for each target group. You can link an Instance to a LB´s security group instead of link to the load balancer. You can use the route tables to redirect traffic to different target group: based on path in URL (ex.com/user, ex.com/orders), based on hostname (a.ex.com, b.ex.com) or based on query string headers (ex.com/user=125&order=5)
     - EC2 Instances
     - ECS Task
@@ -51,7 +53,8 @@ A way to strengthen the health check is to create a **monitoring webpage**, such
 - The Application Load Balancer has individual nodes running in each Availability Zone that are configured with the Application Load Balancer. 
 - Internal:  to balance loads between the layers of a multi-tier application
 - Extertnal: to balance loads inside the Amazon VPC
-- Cross-zone load balancing is enabled by default and can be disabled at the target group level. This load balancing means that every instance in each zone get the same percentage of traffic from the nodes of the load balancers 
+- Cross-zone load balancing is enabled by default and can be disabled at the target group level. This load balancing enabled  means that every instance in each zone get the same percentage of traffic from the nodes of the load balancers, even wheter an AZ have more instances than other.
+- Supports SNI with multiple listeners
 
 #### Network Load Balancer (NLB)
 - TCP and User Datagram Protocol (UDP) connection based
@@ -63,6 +66,7 @@ A way to strengthen the health check is to create a **monitoring webpage**, such
 - DNS: Uses Amazon Route 53 to direct traffic to load balancer nodes in other zones.
 - Target group: EC2 Instances, IP addresses (private) or Application load balancer
 - Cross-zone load balancing is disabled by default and can be enabled at the load balancer level
+- Supports SNI with multiple listeners
 
 #### Gateway Load Balancer (GLB) 
 It provides a gateway for distributing traffic across multiple virtual appliances while scaling them up and down based on demand.
