@@ -89,3 +89,11 @@ Gateway Load Balancer endpoints
 #### Classic Load Balancer (CLB)
 This is the legacy load balancer for AWS.
 Classic Load Balancers are not recommended for use unless you have legacy services or applications that need the Classic Load Balancer.
+
+# Auto Scaling Groups
+- Automatically register new instances to a load balancer
+- If any instances is deemed unhealthy, it is terminated. and a new instance is created to replace it.
+- Free, only pay for the instances.
+- Set parameters: minimun capacity, desire capacity and maximun capacity
+- Define a launch template that contains how to launch every instance within the ASG: IAM, security groups, User data, EBS volumes, SSH Key pair, networking, LB, so on.
+- Autoscale based on CloudWatch alarms (using metrics)
