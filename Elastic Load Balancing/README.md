@@ -47,7 +47,7 @@ A way to strengthen the health check is to create a **monitoring webpage**, such
 - Send responses directly to the client with a fixed response
 - makes routing decisions based on the HTTP and HTTPS protocol. This facilitates granular routing to target groups.
 - TLS offloading using a SSL Certificate. This ensures that the traffic between the client and Application Load Balancer is encrypted.
-- Supports sticky sessions: If requests must be sent to the same backend server because the application is stateful, use the sticky session feature. This feature uses an HTTP cookie to remember which server to send the traffic to across connections.
+- Supports sticky sessions: If requests must be sent to the same backend server because the application is stateful, use the sticky session feature. This feature uses an HTTP cookie to remember which server to send the traffic to across connections. Use case: User doesn´t lose the session data. You can enable this option in the configuration of the target group.
 - The Application Load Balancer has individual nodes running in each Availability Zone that are configured with the Application Load Balancer. 
 - Internal:  to balance loads between the layers of a multi-tier application
 - Extertnal: to balance loads inside the Amazon VPC
@@ -57,7 +57,7 @@ A way to strengthen the health check is to create a **monitoring webpage**, such
 - Layer 4
 - Source IP preservation
 - Ultra-Low latency and high performance (millions of request per seconds)
-- Sticky sessions: Routes requests from the same client to the same target.
+- Supports Sticky sessions: Routes requests from the same client to the same target without cookies. Use case: User doesn´t lose the session data
 - Automatically provides a static IP address per Availability Zone (subnet), you can use an Elastic IP for each AZ.
 - DNS: Uses Amazon Route 53 to direct traffic to load balancer nodes in other zones.
 - Target group: EC2 Instances, IP addresses (private) or Application load balancer
