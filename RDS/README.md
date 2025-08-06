@@ -5,13 +5,6 @@ https://aws.amazon.com/rds/
 A relational database organizes data into tables. Data in one table can link to data in other tables to create relationships—hence, the relational part of the name.
 row is an entry and columns are the attributes of an entry
 TheData schema is fixed. After the database is operational, it becomes difficult to change the schema.
-
-RDBMSs:
-- MySQL
-- PostgresQL
-- Oracle
-- Microsoft SQL Server
-- Amazon Aurora
  
 Use Case
 they’re at the core of many mission-critical application
@@ -28,7 +21,7 @@ Amazon RDS Multi-AZ: Amazon RDS creates a redundant copy of your database in ano
 
 Amazon RDS is built from compute and storage:
 - Compute (Amazon EC2): The compute portion is called the database (DB) instance, which runs the DB engine.
-- Storage (Amazon EBS): Amazon RDS provides three storage types: General Purpose SSD (also called gp2 and gp3), Provisioned IOPS SSD (also called io1), and Magnetic (also called standard)
+- Storage (Amazon EBS): Amazon RDS provides three storage types: General Purpose SSD (also called gp2 and gp3), Provisioned IOPS SSD (also called io1), and Magnetic (also called standard). Storage can AutoScale dynamically, you only set the amximum limit for storage. AutoScaling for unpredictable workloads. 
 
 Supported RDBMSs:
 - Commercial: Oracle, SQL Server
@@ -40,7 +33,6 @@ Security
 - Security can be reinforced with security groups (Database, EC2 and VPC)
 - IAM Policy 
 - Secure data in transit and at rest.
-
 - Network ACLs
 
 Backup data:
@@ -68,4 +60,4 @@ Pricing
 
 
 
- read replica, which is asynchronously updated. usefull for read-heavy database workloads beyond the capacity constraints of a single database instance.
+read replica, which is asynchronously updated. usefull for read-heavy database workloads beyond the capacity constraints of a single database instance.
