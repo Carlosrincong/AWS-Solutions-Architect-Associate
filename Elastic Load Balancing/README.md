@@ -96,4 +96,4 @@ Classic Load Balancers are not recommended for use unless you have legacy servic
 - Free, only pay for the instances.
 - Set parameters: minimun capacity, desire capacity and maximun capacity
 - Define a launch template that contains how to launch every instance within the ASG: IAM, security groups, User data, EBS volumes, SSH Key pair, networking, LB, so on.
-- Autoscale based on CloudWatch alarms (using metrics)
+- Autoscale based on CloudWatch alarms (using metrics like: CPU utilization, Request count per target, average network in/out or any custom metric)
