@@ -17,7 +17,12 @@ Unmanaged Vs Manages:
 
 # Amazon RDS
 Amazon RDS is a managed database service
-Amazon RDS Multi-AZ: Amazon RDS creates a redundant copy of your database in another Availability Zone. The standby copy is not considered an active database, and it does not get queried by applications. DNS Service to point to the new master instances in case of failover.
+Amazon RDS Multi-AZ 
+- Amazon RDS creates a redundant copy of your database in another Availability Zone. 
+- The standby copy is not considered an active database, and it does not get queried by applications. 
+- The standby copy is SYNC replication
+- One DNS name to point to the new master instances in case of failover.
+- Increase the availability
 
 Amazon RDS is built from compute and storage:
 - Compute (Amazon EC2): The compute portion is called the database (DB) instance, which runs the DB engine.
@@ -58,6 +63,9 @@ Pricing
 - Storage
 - Traffic from and to
 
-
-
-read replica, which is asynchronously updated. usefull for read-heavy database workloads beyond the capacity constraints of a single database instance.
+Read replica
+which is asynchronously updated. usefull for read-heavy database workloads beyond the capacity constraints of a single database instance. 
+- Up to 15 read replicas. 
+- Within AZ, Cross AZ or Cross Region (network fee). 
+- Replication is ASYN, so reads are eventually consistent. 
+- Use case: read replicas to run new workloads without affect the performance of the main database. Only for SELECT statements
