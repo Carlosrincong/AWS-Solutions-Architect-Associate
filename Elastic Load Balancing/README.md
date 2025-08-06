@@ -67,6 +67,7 @@ A way to strengthen the health check is to create a **monitoring webpage**, such
 - Target group: EC2 Instances, IP addresses (private) or Application load balancer
 - Cross-zone load balancing is disabled by default and can be enabled at the load balancer level
 - Supports SNI with multiple listeners
+- Supports HTTP, HTTPS and TCP Health check
 
 #### Gateway Load Balancer (GLB) 
 It provides a gateway for distributing traffic across multiple virtual appliances while scaling them up and down based on demand.
