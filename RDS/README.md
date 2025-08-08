@@ -31,7 +31,7 @@ Amazon RDS is built from compute and storage:
 Supported RDBMSs:
 - Commercial: Oracle, SQL Server. With OS and database customization and access for: install patches, access to the underlying EC2 instance and so on. 
 - Open source: MySQL, PostgreSQL, MariaDB
-- Cloud native: Aurora. With cluster volume for HA native and a Local Persistent storage. 5x performance over MySQL and over 3x of PostgreSQL. Up to 15 read replicas with a shared storage volume. Replication is faster than MySQL. 20% more expensive. Supports cross region replication. write endpoint, pointing to the master and read enpoint a load balancer pointing to all read replicas. Supports Aurora global databases.  
+- Cloud native: Aurora. With cluster volume for HA native and a Local Persistent storage. 5x performance over MySQL and over 3x of PostgreSQL. Up to 15 read replicas with a shared storage volume. Replication is faster than MySQL. 20% more expensive. Supports cross region replication. write endpoint, pointing to the master and read enpoint a load balancer pointing to all read replicas which can autoscale. Supports Aurora global databases with up to 5 read replicas in other region.  Aurora offers the option serveless for unpredictable workloads. Bebelfish for Aurora PostgrSQL. Automated backups by default witn point-in-time recovery. Aurora database cloning is faster than snapshot and restore the cluster.
 
 Security
 - DB instance must be in a private subnet group. So they don’t have a route to the internet gateway. 
@@ -69,3 +69,6 @@ which is asynchronously updated. usefull for read-heavy database workloads beyon
 - Within AZ, Cross AZ or Cross Region (network fee). 
 - Replication is ASYN, so reads are eventually consistent. 
 - Use case: read replicas to run new workloads without affect the performance of the main database. Only for SELECT statements
+
+Best practice
+- Instead keep stopped an instance for a long time, take a snapshot and restore from it.
