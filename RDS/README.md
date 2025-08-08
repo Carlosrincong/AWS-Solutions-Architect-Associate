@@ -29,9 +29,9 @@ Amazon RDS is built from compute and storage:
 - Storage (Amazon EBS): Amazon RDS provides three storage types: General Purpose SSD (also called gp2 and gp3), Provisioned IOPS SSD (also called io1), and Magnetic (also called standard). Storage can AutoScale dynamically, you only set the amximum limit for storage. AutoScaling for unpredictable workloads. 
 
 Supported RDBMSs:
-- Commercial: Oracle, SQL Server. With OS and database customization and access for: install patches, access to the underlying EC2 instance. 
+- Commercial: Oracle, SQL Server. With OS and database customization and access for: install patches, access to the underlying EC2 instance and so on. 
 - Open source: MySQL, PostgreSQL, MariaDB
-- Cloud native: Aurora. With cluster volume for HA and a Local Persistent storage.
+- Cloud native: Aurora. With cluster volume for HA native and a Local Persistent storage. 5x performance over MySQL and over 3x of PostgreSQL. Up to 15 read replicas with a shared storage volume. Replication is faster than MySQL. 20% more expensive. Supports cross region replication. write endpoint, pointing to the master and read enpoint a load balancer pointing to all read replicas. Supports Aurora global databases.  
 
 Security
 - DB instance must be in a private subnet group. So they don’t have a route to the internet gateway. 
