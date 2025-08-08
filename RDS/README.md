@@ -36,9 +36,13 @@ Supported RDBMSs:
 Security
 - DB instance must be in a private subnet group. So they don’t have a route to the internet gateway. 
 - Security can be reinforced with security groups (Database, EC2 and VPC)
-- IAM Policy 
+- IAM Policy
+- IAM authentication (instead of user+psw)
 - Secure data in transit and at rest.
 - Network ACLs
+- At rest encryption using KMS. If the master instance is not encryoted, the read replica can´t be encrypted. Snaptshot and restore as encrypted to encrypt and un-encrypted database.
+- In-flight encryption using TLS certificates.
+- Audit logs (optional)
 
 Backup data:
 It is advisable to deploy both backup options. Automated backups are beneficial for point-in-time recovery. With manual snapshots, you can retain backups for longer than 35 days.
