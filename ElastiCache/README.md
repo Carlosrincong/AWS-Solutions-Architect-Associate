@@ -2,20 +2,21 @@
 # ElastiCache
 
 ElastiCache is a fully managed, in-memory caching solution.
-Support for two open-source, in-memory cache engines: Redis and Memcached
-You can build data-intensive apps or improve the performance of your existing apps by retrieving data from high throughput and low latency in-memory data stores.
-
-You can use Amazon ElastiCache to support data-intensive apps or improve the performance of your existing apps by retrieving data from high throughput and low latency in-memory data stores. 
-
-ElastiCache is a popular choice for gaming, advertising technology (ad tech), financial service, healthcare, and Internet of Things (IoT) apps.
-
 No longer need to perform management tasks such as hardware provisioning, software patching, setup, configuration, and failure recovery
 
+Use Case
+- You can build data-intensive apps or improve the performance of your existing apps by retrieving data from high throughput and low latency in-memory data stores.
+- You can use Amazon ElastiCache to support data-intensive apps or improve the performance of your existing apps by retrieving data from high throughput and low latency in-memory data stores. 
+- ElastiCache is a popular choice for gaming, advertising technology (ad tech), financial service, healthcare, and Internet of Things (IoT) apps.
+- Multiple user accessing to the same content at the same time. Cache is a repository of frequently accessed content. without in-memmory database, each request is sent directly to the database in the backend. This can overload the databse. In-memmory improve the response time
+- Reduce load off of databases for read intensive workloads
 
-Multiple user accessing to the same content at the same time. Cache is a repository of frequently accessed content. without in-memmory database, each request is sent directly to the database in the backend. This can overload the databse. In-memmory improve the response time
+Note: Using ElastiCache involves heavy application code changes. You query elasticache before the database, this is called "cache hit" in case "Cache miss" the query read from the database while write in the cache the queried data. cache must be ghave an invalidatyion stategy to use only the most current data.
+To keep yor application stateless, write the session data into Cache and if the user is redirected to other instance, the applicatien retrieve the session data from cache. 
 
-Redis: support complex data types, data replication and HA
-memcahed: data relativly small and static.
+Support for two open-source, in-memory cache engines:
+- Redis: support complex data types, data replication and HA. AOF persistence. Multi AZ with auto-failover
+- memcahed: data relatively small and static. No HA. Serveless
 
 Pricing:
 - nodes: on demand and reserved (1-3y)
