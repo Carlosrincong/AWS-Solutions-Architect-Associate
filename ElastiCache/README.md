@@ -15,7 +15,7 @@ Note: Using ElastiCache involves heavy application code changes. You query elast
 To keep yor application stateless, write the session data into Cache and if the user is redirected to other instance, the applicatien retrieve the session data from cache. 
 
 Support for two open-source, in-memory cache engines:
-- Redis: support complex data types, data replication and HA. AOF persistence. Multi AZ with auto-failover
+- Redis: support complex data types, data replication and HA. AOF persistence. Multi AZ with auto-failover. Serveless optional
 - memcahed: data relatively small and static. No HA. Serveless
 
 Pricing:
