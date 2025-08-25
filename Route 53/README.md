@@ -20,5 +20,6 @@ Records contains:
 Record Type
 - A: maps a hostname to IPv4
 - AAAA: maps a hostname to IPv6
-- CNAME: maps a hostname to another hostname
+- CNAME: maps a hostname to another hostname. ONLY for non root domain name
 - NS: Name server for the hosted zone, which is a container of records
+- Alias: maps a hostname to a AWS resource. for BOTH root domain and non root domain. Free of charge and you can´t set TTL. AWS resource like a Load balancer, CloudFront, API gateway, S3 websites, VPC interface endpoints, Global accelerator, Reoute 53. 
