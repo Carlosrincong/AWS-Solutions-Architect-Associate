@@ -26,7 +26,7 @@ Record Type
 
 Routing policy
 - Simple: tipically, route traffic to a single resource. You can specify multiple values in the same record and only one will be chosen by the client
-- Weighted
+- Weighted: % of request go to specific resource. DNS records must be have the same name and type.
 - Failover
 - Latency
 - Geolocation
