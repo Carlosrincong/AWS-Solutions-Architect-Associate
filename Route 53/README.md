@@ -29,11 +29,11 @@ Authoritative = The user can update de DNS records
 - Weighted: % of request go to specific resource. DNS records must be have the same name and type.
 - Latency: redirect to the resource that has the least latency close to us. Latency is based on traffic between users and AWS regions. For this, you must specify the region of a record. 
 - Failover (active - passive) a HEALTH CHECK is mandatory. Switch between Primary to secondary instance if the primary instance is unhealthy. You must to create a record for primary and other for the secondary enpoint, along with a Health check.
-- Geolocation
+- Geolocation: based on where the user is located. Can be asociated with HC. A record must be created for each location.
 - Multi-value answer
 - Geoproximity
 
-### Health checks
+##### Health checks
 Only for public resources. Automated DNS failover
 - Monitor an endpoint: send http/s or TCP request and wait for: a 2xx response or specific text in the response. You must allow incoming request from the Route 53 HC  in your router/firewall
 - Monitor other health checks (calculated HC): combine the result of multiple child health checks (up to 256) into a single health check
