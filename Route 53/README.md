@@ -32,6 +32,7 @@ Authoritative = The user can update de DNS records
 - Geolocation: based on where the user is located. Can be asociated with HC. A record must be created for each location.
 - Multi-value answer
 - Geoproximity: based on location of users and resources. Bias is a parameter that you define to receive more or less traffic in a specific region. Users will be redirected to the closets region with higher bias. Bias is the capacity of a region to receive traffic. 
+- IP based: route specific CIDR block to specific endpoint.
 
 ##### Health checks
 Only for public resources. Automated DNS failover
