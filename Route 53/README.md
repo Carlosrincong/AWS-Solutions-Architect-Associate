@@ -30,7 +30,7 @@ Authoritative = The user can update de DNS records
 - Latency: redirect to the resource that has the least latency close to us. Latency is based on traffic between users and AWS regions. For this, you must specify the region of a record. 
 - Failover (active - passive) a HEALTH CHECK is mandatory. Shift between Primary to secondary instance if the primary instance is unhealthy. You must to create a record for primary and other for the secondary enpoint, along with a Health check.
 - Geolocation: based on where the user is located. Can be asociated with HC. A record must be created for each location.
-- Multi-value answer
+- Multi-value : route traffic to multiple resources. Can be asociated with HC. 
 - Geoproximity: based on location of users and resources. Bias is a parameter that you define to receive more or less traffic in a specific region. Users will be redirected to the closets region with higher bias. Bias is the capacity of a region to receive traffic. 
 - IP based: route specific CIDR block to specific endpoint.
 
