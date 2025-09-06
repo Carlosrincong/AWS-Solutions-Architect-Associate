@@ -105,6 +105,7 @@ Delete marker replication is no enabled by default, that means if you delete a o
 
 Other features:
 - Requester pays for networking cost of download a blob.
+- S3 events to trigger notifications to SQS, SNS, Lambda or EventBridge for other services. 
 
 # S3 Cost Optimization
 
