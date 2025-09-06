@@ -84,7 +84,7 @@ Buckets can be in one of three states:
 
 Amazon S3 lifecycle:
 You can choose to automate between two types of actions: transition (to another storage class) and expiration (deleted).
-LifeCycle can be applied to all objects in the bucket or based on one or more filters.
+LifeCycle can be applied to all objects in the bucket, based on prefix or tags
 ![Storage_Lifecycle](/img/Storage_Lifecycle.png)
 
 S3 Batch Operations:
