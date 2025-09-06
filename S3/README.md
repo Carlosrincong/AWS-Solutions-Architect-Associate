@@ -103,6 +103,9 @@ You can apply replication to a group of filterd objects in the bucket
 You can enable to change the storage class of the objects in the reploicated bucket
 Delete marker replication is no enabled by default, that means if you delete a object in tue source bucket, the delete marker will not be replicated to the target bucket. that feature will not replicate DELETES only DELETE MARKER
 
+Other features:
+- Requester pays for networking cost of download a blob.
+
 # S3 Cost Optimization
 
 - You need to understand your workloads, and define your application performance and data access requirements. 
