@@ -60,10 +60,10 @@ Storage Classes
 Amazon S3 storage classes let you change your storage tier when your data characteristics change.
 ![s3_storage_classes](/img/s3_storage_classes.jpg)
 - Standard: this is the default storage class. general-purpose storage
-- S3 Intelligent-Tiering: Amazon S3 monitors access patterns of your data and automatically moves your data to the most cost-effective storage tier based on frequency of access. There are three tiers: a frequent access tier, an infrequent access tier, and an archive instance access tier.
-- Standard-Infrequent Access: data that is accessed less frequently but requires rapid access when needed
+- S3 Intelligent-Tiering: Amazon S3 monitors access patterns of your data and automatically moves your data to the most cost-effective storage tier based on frequency of access. There are three tiers: a frequent access tier (default), an infrequent access tier (once 30 days), and an archive instance access tier (once 90 days). Optional tiers: Archive Access tier and Deep Archive Access Tier. Cost: auto-tiering fee, no retrieval charges and monitoring fee. 
+- Standard-Infrequent Access: data that is accessed less frequently but requires rapid access when needed. You will have a cost on retrieval
 - One Zone-Infrequent Access: lower-cost option for infrequently accessed data, but do not require the availability and resilience of S3 Standard or S3 Standard-IA
-- Glacier Instant Retrieval: archiving data that is rarely accessed and requires millisecond retrieval with a fee per GB. Data is stored across three or more AWS Availability Zones.
+- Glacier Instant Retrieval: archiving data that is rarely accessed and requires millisecond retrieval with a fee per GB. Data is stored across three or more AWS Availability Zones. data accessed once a quarter. Minimum storage duration of 90 days.
 - Glacier Flexible Retrieval: archived data that is accessed 1–2 times per year and retrieved in minutes. Data is stored across three or more AWS Availability Zones. Minimum storage duration of 90 days. There are two types: 
     - Free bulk retrievals (5h - 12h) 
     - non-bulk retrievals (Expedited with 1-5 min and Standard with 3-5 h) with a Retrieval fee per GB. 
