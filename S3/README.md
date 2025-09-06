@@ -106,6 +106,9 @@ Delete marker replication is no enabled by default, that means if you delete a o
 Other features:
 - Requester pays for networking cost of download a blob.
 - S3 events to trigger notifications to SQS, SNS, Lambda or EventBridge for other services. 
+- Multipart-upload: Parallelize the uploads. recommended for files > 100 mb. must use for files > 50 GB
+- (download) S3 Byte-range fetches: Parallelize gets and can be used to speed downloads
+- S3 batch operations: bulk operations on a list of files. 
 
 # S3 Cost Optimization
 
