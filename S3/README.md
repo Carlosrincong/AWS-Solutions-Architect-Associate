@@ -52,13 +52,13 @@ Security:
     - IAM Policy: which are attached to resources and users
     - S3 bucket policies: This can only be attached to S3 buckets. S3 bucket policies specify what actions are allowed or denied on the bucket.
     - Encryption: Amazon S3 reinforces encryption in transit (as it travels to and from Amazon S3) and at rest. 
-
+    - Object Access Control List (optional)
+    - Bucket Access Control List (optional)
 ![S3_Bucket_Access](/img/S3_Bucket_Access.png)
 
 Storage Classes
 Amazon S3 storage classes let you change your storage tier when your data characteristics change.
 ![s3_storage_classes](/img/s3_storage_classes.jpg)
-
 - Standard: this is the default storage class. general-purpose storage
 - S3 Intelligent-Tiering: Amazon S3 monitors access patterns of your data and automatically moves your data to the most cost-effective storage tier based on frequency of access. There are three tiers: a frequent access tier, an infrequent access tier, and an archive instance access tier.
 - Standard-Infrequent Access: data that is accessed less frequently but requires rapid access when needed
@@ -71,8 +71,9 @@ Amazon S3 storage classes let you change your storage tier when your data charac
 - S3 on Outposts: Amazon S3 on Outposts delivers object storage to your on-premises AWS Outposts environment using S3 API's and features
 
 
-Versioning
+Versioning (disabled by default)
 Without Amazon S3 versioning, every time you upload an object with the same name to the bucket, it will overwrite the original object.
+It is enabled at the bucket level
 Versioning keeps multiple versions of a single object in the same bucket. 
 Versioning helps with object recovery from accidental deletions, accidental overwrites, or application failures.
 To reduce your Amazon S3 bill, you might want to delete previous versions of your objects when they are no longer needed.
@@ -90,6 +91,11 @@ S3 Batch Operations:
 - Replace object tag sets
 - Modify access controls,
 - Restore archived objects from Amazon S3 Glacier
+
+Replication
+Cross region replication and same region replication (asynchronous both)
+Versioning enabled in both buckets is required
+Buckets can be in different AWS accounts
 
 # S3 Cost Optimization
 
