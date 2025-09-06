@@ -98,6 +98,9 @@ Versioning enabled in both buckets is required
 Buckets can be in different AWS accounts
 Only new objects will be replicated after you enable replication
 For previos obtects you can use S3 batch replication
+You can apply replication to a group of filterd objects in the bucket
+You can enable to change the storage class of the objects in the reploicated bucket
+Delete marker replication is no enabled by default, that means if you delete a object in tue source bucket, the delete marker will not be replicated to the target bucket. that feature will not replicate DELETES only DELETE MARKER
 
 # S3 Cost Optimization
 
