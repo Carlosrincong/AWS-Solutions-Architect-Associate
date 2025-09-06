@@ -96,6 +96,8 @@ Replication
 Cross region replication and same region replication (asynchronous both)
 Versioning enabled in both buckets is required
 Buckets can be in different AWS accounts
+Only new objects will be replicated after you enable replication
+For previos obtects you can use S3 batch replication
 
 # S3 Cost Optimization
 
