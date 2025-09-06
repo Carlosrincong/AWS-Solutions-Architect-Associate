@@ -55,6 +55,12 @@ Security:
     - Object Access Control List (optional)
     - Bucket Access Control List (optional)
 ![S3_Bucket_Access](/img/S3_Bucket_Access.png)
+- Encryption at rest (SSE: Server Side Encryption)
+    - SSE-S3 -> key managed by S3
+    - SSE-KMS -> key managed by KMS
+    - SSE-C -> key managed by the Client
+- Encryption in transit with HTTPS
+
 
 Storage Classes
 Amazon S3 storage classes let you change your storage tier when your data characteristics change.
