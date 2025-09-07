@@ -116,6 +116,9 @@ Other features:
 - (download) S3 Byte-range fetches: Parallelize gets and can be used to speed downloads
 - S3 batch operations: bulk operations on a list of files. 
 - MFA Delete: requires verioning enabled
+- Access Logs: Logs all access to s3 bucket. Set the monitored bucket and the log bucket (destination), they cant be the same.
+
+
 
 # S3 Cost Optimization
 
