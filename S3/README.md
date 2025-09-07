@@ -118,7 +118,7 @@ Other features:
 - MFA Delete: requires verioning enabled
 - Access Logs: Logs all access to s3 bucket. Set the monitored bucket and the log bucket (destination), they cant be the same.
 - Pre-signed URL: using the URL, other user can access to the content of the URL by inhering the permissions of the user that generate the URL.
-
+- Acces point: is an entry point to access to files in a bucket with specific permissions and to specific prefix. So, you only need to give access to the users to the access point, then they will get access.  
 
 # S3 Cost Optimization
 
