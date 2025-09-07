@@ -117,7 +117,7 @@ Other features:
 - S3 batch operations: bulk operations on a list of files. 
 - MFA Delete: requires verioning enabled
 - Access Logs: Logs all access to s3 bucket. Set the monitored bucket and the log bucket (destination), they cant be the same.
-
+- Pre-signed URL: using the URL, other user can access to the content of the URL by inhering the permissions of the user that generate the URL.
 
 
 # S3 Cost Optimization
