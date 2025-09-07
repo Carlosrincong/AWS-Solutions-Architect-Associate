@@ -115,6 +115,7 @@ Other features:
 - Multipart-upload: Parallelize the uploads. recommended for files > 100 mb. must use for files > 50 GB
 - (download) S3 Byte-range fetches: Parallelize gets and can be used to speed downloads
 - S3 batch operations: bulk operations on a list of files. 
+- MFA Delete: requires verioning enabled
 
 # S3 Cost Optimization
 
