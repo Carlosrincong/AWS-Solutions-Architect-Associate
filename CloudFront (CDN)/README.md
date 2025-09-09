@@ -15,5 +15,8 @@ Security
 - Geo restriction: Allow users to access to you content if they are in the list of approved countries using allow list or block list
 
 Pricing
+- the cost of data out per edge location varies based on location
+- reduce the number of edge location for cost reduction, there are 3 classes: all, 200 and 100. 
 
 Features
+- Cache invalidations: s
