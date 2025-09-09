@@ -19,4 +19,4 @@ Pricing
 - reduce the number of edge location for cost reduction, there are 3 classes: all, 200 and 100. 
 
 Features
-- Cache invalidations: s
+- Cache invalidations: the cached content will be refreshed when the TTL expire. Use Cache invalidation to force expiration of TTL 
