@@ -42,6 +42,7 @@ Data transfer services are designed to copy or transfer your on-premises data to
     - You don't need to modify your applications or run any file transfer protocol infrastructure.
     - Store the files you exchange as objects in your Amazon S3 bucket or Amazon EFS file system so that you can extract business insights faster.
     - you pay for only the protocols you have enabled for access to your endpoint and the amount of data transferred over each of these protocols.
+    - Integrate with existing authentication systems
     ![dataTransfer_infraestructure](/img/dataTransfer_infraestructure.png)
 - AWS DataSync: Migrate active datasets to AWS. Archive data to free up on-premises storage capacity. Replicate data to AWS for business continuity. Transfer data to the cloud for analysis and processing. You can use DataSync to speed up your critical hybrid workflows. Features
     - DataSync provides built-in security capabilities, such as encryption of data in transit and data integrity verification in transit and at rest. 
