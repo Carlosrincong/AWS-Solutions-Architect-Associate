@@ -31,7 +31,7 @@ Storage Gateway offers four different types of gateways. Providing low-latency a
     - Amazon S3 File Gateway
     - Amazon FSx File Gateway
     - Volume Gateway (Amazon EBS snapshots)
-    - Tape Gateway
+    - Tape Gateway (physical tapes)
 The local gateway appliance maintains a cache of recently written or read data so that your applications can have low-latency access to data that is stored durably in AWS.  As a native AWS service, Storage Gateway integrates with other AWS services for storage, backup, and management while still integrating with on-premises environments. 
 
 # Data transfer and migration services
