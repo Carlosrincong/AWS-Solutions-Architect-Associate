@@ -20,5 +20,5 @@ Pricing
 
 Features
 - Cache invalidations: the cached content will be refreshed when the TTL expire. Use Cache invalidation to force expiration of TTL 
-- Global accelerator: Uses the anycast ip concept. Leverage the aws internal network to route to yor application. Any cast send the traffic to edge location, and edge locations send the traffic to the applcation. Works with: Elaatic IP, EC2, ALB, NLB. 
-    concept: unicast IP (one server holds one ip address) and anycast ip (many servers holde the same ip address and the users are routed to the nearest server)
+- AWS Global accelerator: Uses the anycast ip concept. Leverage the aws internal network to route traffic to your application, users send traffic to any cast ip in edge location, and edge locations send the traffic to the applcation. Works with: Elastic IP, EC2, ALB, NLB. 
+    concept: unicast IP (one server holds one ip address) and anycast ip (many servers holds the same ip address and the users are routed to the nearest server)
