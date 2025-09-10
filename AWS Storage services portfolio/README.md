@@ -50,6 +50,7 @@ Data transfer services are designed to copy or transfer your on-premises data to
     - You can use the scheduler to periodically run a data transfer task 
     - DataSync works natively with AWS security, monitoring, and audit services to make data movement simpler. 
     - you pay for only the amount of data that you copy: network, managed cloud infraestructure, data validation, and automation capabilities.
+    - Install on premises the AWS DataSync Agent, connect to your local server, then set up in which service in the Cloud will be live your data.
 - AWS Snow Family: Offline data transfers because there’s lack of consistent network connectivity.
 - AWS Application Migration Service (or CloudEndure Migration): highly automated lift-and-shift (rehost) solution. AWS MGN supports migrations from VMware vSphere, Microsoft Hyper-V, Amazon EC2, and other clouds to AWS. How works:
     - Implementation begins by installing the AWS Replication Agent on your source servers. After the agent is installed, you can view and define replication settings for AWS staging area.
