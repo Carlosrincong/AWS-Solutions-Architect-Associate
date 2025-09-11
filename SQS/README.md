@@ -9,7 +9,7 @@ Types:
 
 Set-up
 - Retention
-- Visibility timeout
+- Visibility timeout: once a message is visible to one consumer, the message will be invisible for a time to other consumers. That time is the visibility timeout.
 - Delivery delay
 - Receive message wait time
 
