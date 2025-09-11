@@ -4,7 +4,14 @@
 Producer -> Queue -> Consumer (EC2, Lambda, server)
 
 Types:
-- Standard
+- Standard: order is not preserved
+- FIFI: order is preserved
+
+Set-up
+- Retention
+- Visibility timeout
+- Delivery delay
+- Receive message wait time
 
 Producer:
 - Unlimited numer of messages in Queue to unlimited througput
@@ -18,6 +25,9 @@ Consumer:
 - Scale Autoscaling group based on the Queue lenght metric of CloudWatch
 
 Security
-- Encryption in-flight, at-rest and client-side
+- Encryption server-side (in-flight, at-rest) and client-side
 - IAM
 - SQS Access Policies
+
+Feature:
+- Purge to delete all messages in a Queue
