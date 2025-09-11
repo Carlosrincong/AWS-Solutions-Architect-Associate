@@ -31,3 +31,4 @@ Security
 
 Feature:
 - Purge to delete all messages in a Queue
+- Long polling: polling messages for a long time (20 sec max) to decrease the number of API calls to SQS, while there are not messages arriving to the Queue
