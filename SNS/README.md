@@ -15,9 +15,9 @@ Event producer:
 Security:
 - Encryption server-side (in-flight, at-rest) and client-side
 - IAM policy
-- SNS access policy
+- SNS access policy (who can access you topic)
 
 Feature:
-- FIFO topic: order is preserved
+- FIFO topic: order is preserved, the unique subscriber can be SQS 
 - SNS + SQS for parallel process (miltriple queue) based on the same message
 - Message filtering: JSON policy to filter messages sent to a topic. If a subscription doesnt have a filter, it receives every message
