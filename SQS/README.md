@@ -2,6 +2,7 @@
 # AMAZON SQS
 
 Producer -> Queue -> Consumer (EC2, Lambda, server)
+Scales automatically
 
 Types:
 - Standard: order is not preserved
