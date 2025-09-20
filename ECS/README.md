@@ -19,7 +19,17 @@ Use case:
 
 Amazon ECS is an end-to-end container orchestration service that helps you spin up new containers. With Amazon ECS, your containers are defined in a task definition that you use to run an individual task or a task within a service. 
 
-- Serveless with AWS Fargate
-- Managed with EC2 Instances cluster by intalling a ECS Container Agent
-
 To prepare your application to run on Amazon ECS, you create a task definition. The task definition is a text file, in JSON format, that describes one or more containers and the resources that you need to run a container, such as CPU, memory, ports, images, storage, and networking information.
+
+Launch ECS Task (containers) on ECS Clusters (Cloud)
+
+Launch Type
+- EC2 Launch Type: You provision and mantain the infrastructure. Each EC2 Instance on Cluster must run an agent to be part of the cluster. AWS start/Stop the containers on cluster. You create the task definition (Docker file)
+- Fargate: There is no instance to manage. Its all serveless. You create the task definition. AWS run this Task based on the amount of CPU and RAM you need
+
+IAM Roles for ECS
+- ECS instance profile: Used by the ECS agent in the ECnch type to interact with ECS, CloudWatch, ECR, Secret Manager, so on.
+- ECS Task Role: Allow ECS Task to have a specific role. Task Role is defined in the Task Definition.
+
+Data Volumes: Data persitence on ECS using EFS, which works with both Launch types. Usefull if you want a file system taht your taks use to share the same data. S3 cant be mounted as File system.
+
