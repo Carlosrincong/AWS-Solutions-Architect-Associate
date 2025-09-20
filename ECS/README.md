@@ -42,3 +42,9 @@ Increase/Decrease the number of task running on ECS Cluster using
 Auto Scaling EC2 Instances
 - Auto Scaling Group: CPU
 - ECS Cluster Capacity Provider (recommended)
+
+Use
+- S3 + EventBridge to invoke a ECS task to load the s3 file data to DynamoDB
+- EventBridge Schedule to trigger ECS Taks every time you choose (day, hour, minute, so on)
+- SQS Queue and ECS service polling messages from the queue
+- Register Stopped ECS task to Eventbridge, then use this evento to send a notification using SNS. 
