@@ -33,3 +33,12 @@ IAM Roles for ECS
 
 Data Volumes: Data persitence on ECS using EFS, which works with both Launch types. Usefull if you want a file system taht your taks use to share the same data. S3 cant be mounted as File system.
 
+ECS Service auto scaling (tasks)
+Increase/Decrease the number of task running on ECS Cluster using
+- AWS Application Auto Scaling: CPU, RAM or Metric from ALB. 
+- Schedule
+- CloudWatch metric or alarm
+
+Auto Scaling EC2 Instances
+- Auto Scaling Group: CPU
+- ECS Cluster Capacity Provider (recommended)
