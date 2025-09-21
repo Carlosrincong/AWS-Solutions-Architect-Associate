@@ -11,8 +11,16 @@ pricing: storage/read/write
 serveless
 Scale up or scale down your tables
 All your data is stored on SSDs and is automatically replicated across multiple Availability Zones in a Region
+Highly available with replication across multiple AZ
 
-Core components: DynamoDB uses primary keys to uniquely identify each item in a table and secondary indexes to provide more querying flexibility.
+Core components: 
+- DynamoDB uses primary keys to uniquely identify each item in a table and secondary indexes to provide more querying flexibility.
+- Primary key must be decided at the creation time
+- Sort key is optional
+- 400KB is the maximum size of an Item
+- Data types: Scalar types (string, number, binary, boolean and null), Document types (list, map), set types (String set, number set, binary set)
+- Case when Schemas need to rapid evolve
+
 ![Dynamo_DB_Components_2](/img/Dynamo_DB_Components_2.png)
 
 Use case
@@ -43,10 +51,14 @@ Point in time recovery
 each table must to have id  and sort key (optional). Local and global index to improve the data access
 
 Billig options:
-- Provisioned: read/write expected and scale based on these limits, predictable use
-- On demand: storage/read/write, scale troughtput to meet the demand
+- Provisioned: read/write expected and scale based on these limits, usefull for predictable use. Pay for provisioned read capacity units (RCU) and write capacity units (WCU), You can optionally autoscale RCU and WCU.
+- On demand: storage/read/write, scale troughtput to meet the demand. You pay for what you use, but is more expensive.
 
 - record, attribute and table
 
 
 You can use Amazon DynamoDB Accelerator (DAX), which is an in-memory store for DynamoDB, without the need to modify application logic.
+
+There is two types of table: 
+- Standard
+- Infrenquent Access
