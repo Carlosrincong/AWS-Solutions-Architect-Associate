@@ -48,3 +48,7 @@ Use
 - EventBridge Schedule to trigger ECS Taks every time you choose (day, hour, minute, so on)
 - SQS Queue and ECS service polling messages from the queue
 - Register Stopped ECS task to Eventbridge, then use this evento to send a notification using SNS. 
+
+Step-by-step
+1. Create the ECS cluster with one or two types
+2. Create a Service with the node definition and Role, to create nodes in CLuster
