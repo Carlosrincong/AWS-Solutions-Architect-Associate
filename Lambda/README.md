@@ -115,5 +115,5 @@ To establish a private connection between your VPC and Lambda, create an interfa
 - maximum execution time of 15 minutes 
 - Memmory allocation: 125MB - 10G
 - Enviroment variables: 4KB
-- Concurrency execution: 1.000 (can be increased)
+- Concurrency execution: 1.000 (can be increased at the account level)
 - .zip deployment: 50 MB
