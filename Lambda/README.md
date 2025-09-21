@@ -28,7 +28,7 @@ These settings are important in defining how each function performs: memory, tim
 - Provisioned concurrency is an option used when you need high performance and low latency, because enviroment are prepared to respond immediately to your function's invocations.. You pay for the amount of provisioned concurrency that you configure and for the period of time that you have it configured. 
 - CloudWatch includes two built-in metrics that help determine concurrency: ConcurrentExecutions and UnreservedConcurrentExecutions.
 
-Pricing: You are charged based on the number of requests for your functions and the duration. Price also depends on the amount of memory you allocate to your function, not the amount of memory your function uses. The AWS Lambda Free Tier includes 1 million free requests per month and 400,000 GB-seconds of compute time per month.
+Pricing: You are charged based on the number of requests for your functions and the compute duration. Price also depends on the amount of memory you allocate to your function, not the amount of memory your function uses. The AWS Lambda Free Tier includes 1 million free requests per month and 400,000 GB-seconds of compute time per month.
 
 ### Code
 The Lambda function handler is the method in your function code that processes events. The handler method takes two objects:
