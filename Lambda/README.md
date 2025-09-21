@@ -110,3 +110,10 @@ To establish a private connection between your VPC and Lambda, create an interfa
 
 - If an order fails, you cannot ignore that order error. You move that error into the dead-letter queue and manually look at the queue and fix the problems. Interact with SQS (Queue) or SNS (topic)
 - AWS CloudTrail helps audit your application by recording all the API actions made against the application. These logs can be exported to the analysis tool of your choice for additional analysis. 
+
+### Limits
+- maximum execution time of 15 minutes 
+- Memmory allocation: 125MB - 10G
+- Enviroment variables: 4KB
+- Concurrency execution: 1.000 (can be increased)
+- .zip deployment: 50 MB
