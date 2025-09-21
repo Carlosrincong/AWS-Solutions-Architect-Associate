@@ -133,7 +133,14 @@ code that is attached to CloudFront distributions to minimize latency:
 
 Functions are deployed globally to cutomize CDN Content
 
+### RDS
 Lambda with RDS Proxy
 - Improve scalability by pooling and sharing DB connections
 - Improve availability by reducing by 66% the failover time and preserving connections. 
 - The lambda must be deployed in a VPC, because RDS Proxy never is publicly accessible
+
+Data events
+- Invoke lambda function triggered by a data event in Aurora or RDS PostgreSQL
+- You must allow inboud traffic from the database to lambda function
+- The Database must have permission to invoke the lambda function.
+- Send Event notifications (not abot the data) to SNS or EventBridge. Event notifications are about you DB instance itself
