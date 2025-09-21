@@ -125,3 +125,10 @@ Reseserved concurrency (concurrency limit) and Provisioned concurrency (Cold sta
 ### SnapStart
 Improves the performance (up to 10x) at no extra cost, because funtion is invoked from pre-initialized state
 pre-initialized lambda is a snapshot of initialized function, and that snapshot is cached
+
+### Edge funtions
+code that is attached to CloudFront distributions to minimize latency:
+- CloudFront functions: Change the viewer request and viewer reponse (viewer = from client to CloudFront). Very very simple functions
+- Lambda@Edge: change the cloudfront request and response (origin and viewer, Origin = from CloudFront to Server). Very simple functions.
+
+Functions are deployed globally to cutomize CDN Content
