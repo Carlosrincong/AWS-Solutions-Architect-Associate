@@ -5,6 +5,7 @@ Create, publish, mantain, monitor and secure APIs at any scale
 Serveless
 It can be used along with any other service (EC2, lambda) to build backend for your application
 REST API publicly accessible for clients
+Web Socket API
 API gateway proxy requests to Backend (Lambda, ECS, HTTP endpoints, AWS services)
 Handle security (Authentication and authorization)
 Expose any service to the outside through API Gateway
