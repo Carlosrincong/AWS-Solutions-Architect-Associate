@@ -121,3 +121,7 @@ To establish a private connection between your VPC and Lambda, create an interfa
 #
 
 Reseserved concurrency (concurrency limit) and Provisioned concurrency (Cold start) are diferent
+
+### SnapStart
+Improves the performance (up to 10x) at no extra cost, because funtion is invoked from pre-initialized state
+pre-initialized lambda is a snapshot of initialized function, and that snapshot is cached
