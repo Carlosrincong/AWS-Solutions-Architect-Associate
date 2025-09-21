@@ -132,3 +132,8 @@ code that is attached to CloudFront distributions to minimize latency:
 - Lambda@Edge: change the cloudfront request and response (origin and viewer, Origin = from CloudFront to Server). Very simple functions.
 
 Functions are deployed globally to cutomize CDN Content
+
+Lambda with RDS Proxy
+- Improve scalability by pooling and sharing DB connections
+- Improve availability by reducing by 66% the failover time and preserving connections. 
+- The lambda must be deployed in a VPC, because RDS Proxy never is publicly accessible
