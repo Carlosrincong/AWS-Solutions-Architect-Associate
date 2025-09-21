@@ -117,3 +117,7 @@ To establish a private connection between your VPC and Lambda, create an interfa
 - Enviroment variables: 4KB
 - Concurrency execution: 1.000 (can be increased at the account level)
 - .zip deployment: 50 MB
+
+#
+
+Reseserved concurrency (concurrency limit) and Provisioned concurrency (Cold start) are diferent
