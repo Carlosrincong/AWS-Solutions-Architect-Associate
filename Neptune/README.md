@@ -3,7 +3,7 @@
 
 Neptune is a fully managed graph database offered by AWS.
 A graph database is a good choice for highly connected data with a rich variety of relationships.  for applications that work with highly connected datasets. 
-Neptune offers read replicas in multtiple AZ for highly availability (max 15)
+Neptune offers by default 3 read replicas in multiple AZ for highly availability (max 15)
 Cluster volume: copies of the data in multiple AZ in a single region.
 
 Companies often use graph databases for recommendation engines, fraud detection, and knowledge graphs.
@@ -50,3 +50,9 @@ Security
 - IAM: who can manage
 - HTTPS encrypted connections: comunication with the database
 - Data is encrypted at rest and in transit, keys can be managed with KMS
+
+## Neptune Streams
+- Real-time ordered sequence of evenry change to your graph data
+- Changes are available inmediately after writing
+- Stream data is accesible in a HTTP REST API
+- Use Case: notifications, synchronization in another data store, replicate data across multiple regions
