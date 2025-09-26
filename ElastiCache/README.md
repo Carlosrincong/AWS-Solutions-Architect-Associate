@@ -11,6 +11,7 @@ Use Case
 - Multiple user accessing to the same content at the same time. Cache is a repository of frequently accessed content. without in-memmory database, each request is sent directly to the database in the backend. This can overload the databse. In-memmory improve the response time
 - Reduce load off of databases for read intensive workloads
 - Gaming leaderboards are computationally complex
+- Frequent reads, less writes. Cache results fo DB Queries. Store session data for websites.
 
 Note: Using ElastiCache involves heavy application code changes. You query elasticache before the database, this is called "cache hit" in case "Cache miss" the query read from the database while write in the cache the queried data. cache must be ghave an invalidatyion stategy to use only the most current data.
 To keep yor application stateless, write the session data into Cache and if the user is redirected to other instance, the applicatien retrieve the session data from cache. 
@@ -35,3 +36,9 @@ security
 - encryption at rest and in transit
 - Redis AUTH with pasw/token
 - Memcached: SASL-based authentication
+
+Features:
+- Support read replicas for Sharding
+- Backups
+- Snapshots
+- Point in time recovery
