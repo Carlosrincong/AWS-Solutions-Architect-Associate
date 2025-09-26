@@ -4,9 +4,15 @@ https://aws.amazon.com/rds/
 
 A relational database organizes data into tables. Data in one table can link to data in other tables to create relationships—hence, the relational part of the name.
 row is an entry and columns are the attributes of an entry
-TheData schema is fixed. After the database is operational, it becomes difficult to change the schema.
- 
-Use Case
+The Data schema is fixed. After the database is operational, it becomes difficult to change the schema.
+OLTP
+
+Features:
+- Auto-scaling capability for Storage
+- Supports read-replica
+- High Availability using a stand by database in other AZ
+
+Use Case:
 they’re at the core of many mission-critical application
 - Applications that have a fixed schema
 - Applications that need persistent storage and follow the ACID principle: CRM, ERP, financial and commerce.
@@ -29,7 +35,7 @@ Amazon RDS is built from compute and storage:
 - Storage (Amazon EBS): Amazon RDS provides three storage types: General Purpose SSD (also called gp2 and gp3), Provisioned IOPS SSD (also called io1), and Magnetic (also called standard). Storage can AutoScale dynamically, you only set the amximum limit for storage. AutoScaling for unpredictable workloads. 
 
 Supported RDBMSs:
-- Commercial: Oracle, SQL Server. With OS and database customization and access for: install patches, access to the underlying EC2 instance and so on. 
+- Commercial: Oracle, SQL Server, DB2. With OS and database customization and access for: install patches, access to the underlying EC2 instance and so on. 
 - Open source: MySQL, PostgreSQL, MariaDB
 - Cloud native: Aurora. With cluster volume for HA native and a Local Persistent storage. 5x performance over MySQL and over 3x of PostgreSQL. Up to 15 read replicas with a shared storage volume. Replication is faster than MySQL. 20% more expensive. Supports cross region replication. write endpoint, pointing to the master and read enpoint a load balancer pointing to all read replicas which can autoscale. Supports Aurora global databases with up to 5 read replicas in other region.  Aurora offers the option serveless for unpredictable workloads. Bebelfish for Aurora PostgrSQL. Automated backups by default witn point-in-time recovery. Aurora database cloning is faster than snapshot and restore the cluster.
 
@@ -50,8 +56,6 @@ It is advisable to deploy both backup options. Automated backups are beneficial 
 - Manual snapshot: If you want to keep your automated backups longer than 35 days, use manual snapshots. Manual snapshots are similar to taking Amazon EBS snapshots, except you manage them in the Amazon RDS console. 
 
 With Amazon RDS, you can manage common database administration tasks like OS patching, database updates, and backups
-
-Tables should be indexed to allow a query to quickly find the data needed to produce a result. Indexes can also help control the way data is physically stored on disk. They physically group records into a predictable order based on the key values within the table. This plays a huge part in the speed and efficiency of queries.
 
 OLTP: databases focus on recording Update, Insertion, and Deletion data transactions. 
 OLAP: you can extract information from a large database and analyze it for decision-making
@@ -76,3 +80,4 @@ which is asynchronously updated. usefull for read-heavy database workloads beyon
 
 Best practice
 - Instead keep stopped an instance for a long time, take a snapshot and restore from it.
+- Tables should be indexed to allow a query to quickly find the data needed to produce a result. Indexes can also help control the way data is physically stored on disk. They physically group records into a predictable order based on the key values within the table. This plays a huge part in the speed and efficiency of queries.
