@@ -15,6 +15,8 @@ Highly available with replication across multiple AZ
 Amazon DynamoDB can handle more than 10 trillion requests per day and support peaks of more than 20 million requests per second. 
 DynamoDB supports ACID-compliant transactions.
 Point in time recovery
+Multi AZ by default
+REad and writes are decoupled
 
 ### Core components
 - DynamoDB uses primary keys to uniquely identify each item in a table and secondary indexes to provide more querying flexibility.
@@ -40,6 +42,7 @@ Point in time recovery
 - high concurrency and connections for millions of users and millions of requests per second.
 - advertising tech, shopping carts, and IoT
 - mobile, web, gaming, ad tech, IoT
+- serveless applications and distributed serveless cache
 
 ### Security
 - Data is redundantly stored on multiple devices across multiple facilities in a DynamoDB Region.  
@@ -48,7 +51,7 @@ Point in time recovery
 - Encryption in transit and at rest
 
 ### Billig options:
-- Provisioned: read/write expected and scale based on these limits, usefull for predictable use. Pay for provisioned read capacity units (RCU) and write capacity units (WCU), You can optionally autoscale RCU and WCU.
+- Provisioned: read/write expected and scale based on these limits, usefull for predictable use. Pay for provisioned read capacity units (RCU) and write capacity units (WCU), You can optionally auto-scale RCU and WCU.
 - On demand: storage/read/write, scale troughtput to meet the demand. You pay for what you use, but is more expensive.
 
 ### Table types: 
@@ -56,12 +59,19 @@ Point in time recovery
 - Infrenquent Access
 - Global: tables replicated across multiple regions. Active-active replication, theat means you can read or write to the table in any region. DynamoDB Streams must be enable as pre-requisite
 
+### DynamoDB Stream 
+- For event processing
+- To integfrate with AWS Lambda or Kinesis Data Streams  
+
 ### DynamoDB Accelerator (DAX) 
 - You can use Amazon DynamoDB Accelerator (DAX), which is an in-memory store for DynamoDB, without the need to modify application logic.
 - Solve read congestion by caching. Microsecods of latency for cached data
 - Cached data have 5 minutes by default to TTL 
+- REquires DynamoDB Stream enabled
 
 ### Backup
+- Automated Backups up to 35 days with PITR
+- On-demand backups for long term retention
 - Point int time recovery (PITR)
 - Integration with S3 (requires PITR): 
     - Export to s3 for retention. Doesn´t affect the Read capacity of the table. 
