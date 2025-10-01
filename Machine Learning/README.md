@@ -19,3 +19,11 @@ Use case:
 - Transcribe customer service calls
 - Captioning and subtitling
 - Generate metadata for media assets to create a fully searchable archive
+
+## Amazon Polly
+- Text to lifelike speech using deep learning
+- Lexicon: customize the pronunciation of the words
+- Synthesis Markup Lenguage (SSML): Generate speech from a plain text or from documents. More enphasis in how speech is made and more customization.
+    - Phonetic pronunciation
+    - Emphasizing specific word or phrases
+    - Breathing sounds or whispering
