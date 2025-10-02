@@ -41,3 +41,6 @@ Use case:
 
 ## Amazon Comprehend Medical
 - Natural Leanguage Processing for healthcare
+
+## SageMaker AI
+- Service for developers to build ML models
