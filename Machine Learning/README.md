@@ -27,3 +27,6 @@ Use case:
     - Phonetic pronunciation
     - Emphasizing specific word or phrases
     - Breathing sounds or whispering
+
+## Amazon Translate
+- localize content for international users and translate large volumes of text efficiently
