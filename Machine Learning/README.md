@@ -30,3 +30,7 @@ Use case:
 
 ## Amazon Translate
 - localize content for international users and translate large volumes of text efficiently
+
+## Amazon Lex and Connect
+- Lex: same technology that power Alexa. Helps build Call Center bots or Chatbots
+- Connect: cloud-based virtual contact center. Create contact flows and receive calls, who can be integrated with a CRM 
