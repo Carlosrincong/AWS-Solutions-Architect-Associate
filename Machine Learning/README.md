@@ -35,6 +35,9 @@ Use case:
 - Lex: same technology that power Alexa. Helps build Call Center bots or Chatbots
 - Connect: cloud-based virtual contact center. Create contact flows and receive calls, who can be integrated with a CRM 
 
-## Amazon Comprehended
+## Amazon Comprehend
 - Natural Leanguage Processing: find insights and relationships in text
 - Analize customer interactions to find the customer experience
+
+## Amazon Comprehend Medical
+- Natural Leanguage Processing for healthcare
