@@ -44,3 +44,8 @@ Use case:
 
 ## SageMaker AI
 - Service for developers to build ML models
+
+## Amazon Kendra
+- Document search service
+- Respond answer based on documents (pdf, power point, so on)
+- 1incremental learning
