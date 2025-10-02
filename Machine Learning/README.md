@@ -49,3 +49,9 @@ Use case:
 - Document search service
 - Respond answer based on documents (pdf, power point, so on)
 - 1incremental learning
+
+## Amazon Personalize
+- Provide real-time personalized recommendations in your app
+
+## Amazon Textract
+- Extract text, handwriting or data from scanned documents
