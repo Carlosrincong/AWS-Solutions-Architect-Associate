@@ -45,8 +45,16 @@ You can even pull data from different AWS Regions into a single dashboard to cre
 You can use external or custom tools to ingest and analyze CloudWatch metrics using the GetMetricData API
 
 CloudWatch Logs:
-You can query and filter your log data.
-Setup CloudWatch Logs agent on the EC2 instance to ingest logs from EC2 instances.
+- Log groups: represent an application
+- Log stream: log files
+- Configure a expiration policy
+- You can query and filter your log data.
+- Setup CloudWatch Logs agent on the EC2 instance to ingest logs from EC2 instances.
+- Logs are encrypted by default 
+- Source: SDK, Logs Agent, Unified Agent, Elastic Beanstalk, Lambda, ECS, API Gateway, VPC Flow logs, API Gateway, CloudTrail, Route53
+- Query Logs using CloudWatch Insights: save queries and use them in CloudWatch Dashboards, Calculate statistics
+- S3 Export: logs can take up to 12 hours to become available for export. CreateExportTaks in the API CALL. 
+- Log Subscription (export in real-time or near to): send to Kinesis Data Stream, Kinesis Data Firehose, Lambda. Subscription filter for filter logs to the destination
 
 CloudWatch Alarms:
 metrics + threshold + time period + action
