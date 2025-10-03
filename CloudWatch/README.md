@@ -55,6 +55,7 @@ CloudWatch Logs:
 - Query Logs using CloudWatch Insights: save queries and use them in CloudWatch Dashboards, Calculate statistics
 - S3 Export: logs can take up to 12 hours to become available for export. CreateExportTaks in the API CALL. 
 - Log Subscription (export in real-time or near to): send to Kinesis Data Stream, Kinesis Data Firehose, Lambda. Subscription filter for filter logs to the destination
+- Live Tail: is a real time interface that wait for log entries in a log group and optionally a log stream that match with a filter. Hepful for DEBUG.
 
 CloudWatch Alarms:
 metrics + threshold + time period + action
