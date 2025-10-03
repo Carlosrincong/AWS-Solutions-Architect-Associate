@@ -53,3 +53,10 @@ metrics + threshold + time period + action
 You can create CloudWatch alarms to automatically initiate actions based on sustained state changes of your metrics. 
 Set a threshold that is elevated  for a sustained amount of time to difine when invoke an alarm. 
 Configure the action that is performed when alarm comes in.
+
+CloudWatch Metrics: 
+- Metric is a variable to monitor
+- dimension is a attribute of a metric. up to 30 attributes per metric
+- Can create Dashboards of metrics
+- Can create custom metrics
+- Streams: continually stream (near-real-time) metrics to a destination such as Kinesis Data Firehose or 3rd party provider (datadog, dynatrace, splunk). Optionally you can filter metrics to stream a subset of them
