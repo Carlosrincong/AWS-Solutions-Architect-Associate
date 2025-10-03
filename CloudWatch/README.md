@@ -62,7 +62,10 @@ CloudWatch Alarms:
 metrics + threshold + time period + action
 You can create CloudWatch alarms to automatically initiate actions based on sustained state changes of your metrics. 
 Set a threshold that is elevated  for a sustained amount of time to difine when invoke an alarm. 
-Configure the action that is performed when alarm comes in.
+- Target: Configure the action that is performed when alarm comes in. Targets: EC2 instances, Auto-scaling group, SNS.
+- Alarm states: OK, INSUFFICIENT_DATA, ALARM.
+- Composite alarms: monitor the states of multiple alarms. Create a condition based on it. Reduce the alarm noise. 
+- Set an Alarm of a filtered metric
 
 CloudWatch Metrics: 
 - Metric is a variable to monitor
