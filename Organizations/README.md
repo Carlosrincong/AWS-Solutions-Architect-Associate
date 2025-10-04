@@ -14,3 +14,5 @@ Benefits
 - Send CloudWatch logs to a central Logging account
 - Cross account roles for admin purposes
 - Security Control Policies: Manage IAM policies to accounts. SCP inhertit IAM policy based on hierarchy
+- Tag Policy: Standarize tags across all AWS Accounts in an Organization. Define keys and their allowed values. This helps with cost allocation tags and Attributed-based Access Control
+ 
