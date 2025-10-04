@@ -73,3 +73,13 @@ CloudWatch Metrics:
 - Can create Dashboards of metrics
 - Can create custom metrics
 - Streams: continually stream (near-real-time) metrics to a destination such as Kinesis Data Firehose or 3rd party provider (datadog, dynatrace, splunk). Optionally you can filter metrics to stream a subset of them
+
+CloudWatch Container Insights
+- Collect, aggregate, summarize metrics and logs from Containers (ECS, EKS, Kubernetes on EC2 or Fargate)
+- Use a containerized version of CloudWatch Agent
+
+CloudWatch Lambda Insights
+- Lambda Insights is provided as a Lambda Layer
+
+CloudWatch Application Isights
+- For other AWS Services
