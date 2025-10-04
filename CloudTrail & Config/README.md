@@ -19,3 +19,10 @@ CloudTrail Insights Events:
 Events Retention
 - Events are stored 90 days in CloudTrail
 - For log term use S3 with Athena
+
+# AWS Config
+- Record compliance configurations of the AWS account and changes over time
+- Per-region service
+- AWS Config doesn´t prevent actions from happening (no deny)
+- Remediations for non-compliant resources using SSM automation documents
+- Trigger EventBridge Notifications when a AWS Resource is non-compliant
