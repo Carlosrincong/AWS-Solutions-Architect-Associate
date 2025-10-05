@@ -26,3 +26,15 @@ Features:
 
 Cases:
 - Encrypted AMI sharing process: AMI in account 1 is encrypted by KMS Key of account 1. You give permission to the account 2 to launch the Encrypted AMI. Then share the KMS key used to encrypt. In the account 2 the IAM role must have permission to use the KMS key. Finally, Lanuch in the account 2 the AMI and optionally use other key in this account. 
+
+# AWS Systems Manager
+### SSM Parameter Store
+- Store configurations and secrets with version tracking
+- Security with IAM
+- Optional encryption with KMS
+- Store Hierarchy
+
+Billing
+- Standard (free): up to 10.000 parameters per region per Account
+- Advanced: up to 100.000 parameters per region per Account. Parameter policy
+    - Parameter policy: assign TTL to a parameter. 
