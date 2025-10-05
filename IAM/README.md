@@ -127,3 +127,8 @@ CloudTrail also logs successful and failed sign-in attempts for IAM users and fe
 - AWS Managed Microsoft AD
 - Simple AD (standalone)
 - AD Connector (proxy)
+
+# AWS Control Tower
+- Uses AWS Organizations to create Accounts
+- Preventive Guardrail using SCP of AWS Organizations
+- Detective Guardrail using AWS Config
