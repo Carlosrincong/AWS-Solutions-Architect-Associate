@@ -41,8 +41,10 @@ Resource-based policies grant permissions to the principal that is specified in 
 ACLs are **cross-account** permissions policies that grant permissions to the specified principal. ACLs cannot grant permissions to entities within the same account.
 
 ## Guardrails
+Effective permissions is the intersection of: Organizations SCP, Permissions Boundary and Identity-based policy
 ### Permissions boundary
 This sets the maximum permissions that an identity-based policy can grant to an IAM entity. 
+Supported for users and roles
 ### AWS Organizations SCPS
 SCPs specify the maximum permissions for an account, or a group of accounts, called an organizational unit (OU). 
 #### Session policy
