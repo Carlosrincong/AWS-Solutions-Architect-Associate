@@ -36,7 +36,7 @@ permission over resources can comes with specific conditions if you want. Permis
 ### IAM Policies (Identity-based)
 Identity-based policies are managed and inline policies attached to IAM identities (users, groups to which users belong, or roles).
 ### Resource-based policies
-Resource-based policies grant permissions to the principal that is specified in the policy; hence, the principal policy element is required. 
+Resource-based policies grant permissions to the principal that is specified in the policy; hence, the principal policy element is required. Resources: S3, SQS, SNS, Lambda, Kinesis, so on. 
 ### ACLs
 ACLs are **cross-account** permissions policies that grant permissions to the specified principal. ACLs cannot grant permissions to entities within the same account.
 
