@@ -117,3 +117,13 @@ lets you specify an exception to a list of principals. you can deny access to al
 # CloudTrail
 AWS CloudTrail provides a record of actions taken by an IAM user or role.
 CloudTrail also logs successful and failed sign-in attempts for IAM users and federated users. 
+
+
+# IAM Identity Center (successor to AWS Single Sing-on)
+- One login for all AWS Accounts in Organizations, Cloud Applications, SAML2.0-enabled applications and EC2 Windows instances.
+- Identity provider: Built-in Identity store in IAM or 3rd Party like Azure Active Directory,... 
+
+# Directory Service
+- AWS Managed Microsoft AD
+- Simple AD (standalone)
+- AD Connector (proxy)
