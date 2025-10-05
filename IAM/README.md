@@ -101,6 +101,10 @@ lets you specify an exception to a list of principals. you can deny access to al
 ### Access History
 - IAM provides last accessed information to help you identify unused permissions, refine your policies, and allow access to only the services and actions that your IAM entities use.
 - There are two types: AWS service information and allowed action information. 
+### IAM Conditions
+- deny/allow access based on tags
+- aws:PrincipalOrgID to set a policy that applies to AWS accounts in an Organization. Ex: Only members on Organization can read S3 objects.
+- 
 
 # AWS Security Token Service (AWS STS)
 - Temporary security credentials are required when assuming an IAM role, and they work almost identically to the long-term access key credentials that your IAM users can use
