@@ -75,6 +75,10 @@ You must create an internet gateway to connect your VPC to the internet.
 NAT translates private IP addresses to public IP addresses, ensuring communication out to the internet.
 An Amazon VPC can have only one internet gateway (opens in a new tab) at a time, and it is a regional resilient service ensuring high availability. 
 The only architectural difference between a public and private subnet is that a public subnet has a route to an internet gateway. For public subnet enable auto-assign public ipv4 address.
+###### Bastion Host
+- Bastion Host is an Instance in the public subnet with their own security group (BastionHost-SG). This instance have access to the EC2 instances in te private subnet. Users firt connect vis SSH to the Bastion Host,  then via SSH connect to the Private Instances. 
+- The key is that the Bastion Host must be have access to the internet and limited from potencial IP Users throught Security group.
+- The security group pf the private instances must allow the security group of the bastion host.
 #### Virtual private gateway
 A virtual private gateway connects your VPC to another private network.
 When you have both gateways, you can then establish an encrypted virtual private network (VPN) connection between the two sides.
