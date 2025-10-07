@@ -1,7 +1,7 @@
 https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html
 
 - IPv4: you don’t see an IP address in its binary format. Instead, it’s converted into decimal format in octets and noted as an IPv4 address.
-- CIDR: CIDR notation is a compressed way of representing a range of IP addresses. Specifying a range determines how many IP addresses are available to you. . In AWS, the smallest IP range you can have is /28, which provides 16 IP addresses. The largest IP range you can have is a /16, which provides 65,536 IP addresses. In order of being likely to need the most IP addresses to the least, the three-tier VPC architecture is as follows: 1. Private (Applications) 2. Private (Data) 3. Public
+- CIDR: CIDR notation is a compressed way of representing a range of IP addresses. Specifying a range determines how many IP addresses are available to you. In AWS, the smallest IP range you can have is /28, which provides 16 IP addresses. The largest IP range you can have is a /16, which provides 65,536 IP addresses. In order of being likely to need the most IP addresses to the least, the three-tier VPC architecture is as follows: 1. Private (Applications) 2. Private (Data) 3. Public
 - For communications between Amazon VPC, hub-and-spoke topologies are preferred over many-to-many mesh
 - You never need to worry about this router, it just works, and it's managed by AWS to route traffic between subnets in your Amazon VPC. 
 - Networking layers:
