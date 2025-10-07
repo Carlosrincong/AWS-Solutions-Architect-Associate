@@ -74,7 +74,7 @@ security groups are not capable of explicitly blocking traffic. If you need to b
 You must create an internet gateway to connect your VPC to the internet.
 NAT translates private IP addresses to public IP addresses, ensuring communication out to the internet.
 An Amazon VPC can have only one internet gateway (opens in a new tab) at a time, and it is a regional resilient service ensuring high availability. 
-The only architectural difference between a public and private subnet is that a public subnet has a route to an internet gateway.
+The only architectural difference between a public and private subnet is that a public subnet has a route to an internet gateway. For public subnet enable auto-assign public ipv4 address.
 #### Virtual private gateway
 A virtual private gateway connects your VPC to another private network.
 When you have both gateways, you can then establish an encrypted virtual private network (VPN) connection between the two sides.
