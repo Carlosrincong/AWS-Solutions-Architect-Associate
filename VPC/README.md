@@ -15,7 +15,7 @@ https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html
 -  the CIDR range used in Amazon VPC must not overlap or cause a conflict with the CIDR block in the on-premises data center.
 
 # VPC
-VPC is an isolated network that you create in the AWS Cloud, consist of: VPC name + CIDR + Region
+VPC is an isolated network that you create in the AWS Cloud, consist of: VPC name + CIDR + Region (regional service)
 Every instance must live inside of a VPC
 The same VPC can have more than one CIDR block (up to 5)
 
