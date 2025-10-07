@@ -70,10 +70,10 @@ security groups are not capable of explicitly blocking traffic. If you need to b
     Route tables to control outbound traffic mainly and Security (ACL and Security Group) to control how traffic ingress to vpc
 
 ## Gateways
-#### Internet gateway
-To activate internet connectivity for your VPC, you must create an internet gateway to connect your VPC to the internet.
+#### Internet gateway (IGW)
+You must create an internet gateway to connect your VPC to the internet.
 NAT translates private IP addresses to public IP addresses, ensuring communication out to the internet.
-An Amazon VPC can have one internet gateway(opens in a new tab) at a time, and it is a regional resilient service ensuring high availability. 
+An Amazon VPC can have only one internet gateway (opens in a new tab) at a time, and it is a regional resilient service ensuring high availability. 
 The only architectural difference between a public and private subnet is that a public subnet has a route to an internet gateway.
 #### Virtual private gateway
 A virtual private gateway connects your VPC to another private network.
