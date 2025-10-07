@@ -17,6 +17,7 @@ https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html
 # VPC
 VPC is an isolated network that you create in the AWS Cloud, consist of: VPC name + CIDR + Region
 Every instance must live inside of a VPC
+The same VPC can have more than one CIDR block (up to 5)
 
 - Default VPC: AWS Creates VPCs in every region by Default in the Default VPC. Each default Amazon VPC creates a public subnet within each Availability Zone within the supported Region. Any resource that you put inside the default VPC will be public and accessible by the internet.
 - Custom VPCs is more secure and provide more granular access to the internet. This is a regional service. Amazon VPC must be explicitly defined when you create it; nothing is allowed in or out without explicit configuration. 
@@ -25,7 +26,7 @@ Every instance must live inside of a VPC
 -   Subnets are used to provide high availability and connectivity options for your resources. Use a public subnet for resources that must be connected to the internet and a private subnet for resources that won't be connected to the internet.
 -   Subnet consist of: VPC + Availability Zone + CIDR. 
 -   A best practice to maintain redundancy and fault tolerance, create at least two subnets configured in two Availability Zones.
--   AWS reserves five IP addresses in each subnet. These IP addresses are used for: VPC local routing, Domain Name System (DNS), Future use, network broadcast address and network address.
+-   AWS reserves five IP addresses in each subnet, the first 4 and the last one. These IP addresses are used for: VPC local routing, Domain Name System (DNS), Future use, network broadcast address and network address.
 -   Subnets are created in Availability Zone level and can be more than one in each AZ.
 -   CIDR provides more granular control of the number of addresses you assign to each subnet.
 
