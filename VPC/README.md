@@ -93,7 +93,7 @@ Manage and simplify connections and peering for your Amazon VPCs
 NAT Gateway is a managed services that uses an Elastic IP address
 Service per Availability zone
 NAT Gateway is only used by services in other subnets
-Requires a Internet Gateway (IGW), therefore this works like that: private subnet -> NATGW -> IGW
+Requires a Internet Gateway (IGW), therefore this works like that: private subnet 1-> NATGW -> IGW. Where 1-> is a coonnection stablished in the route table
 Fault tolerancy: Create multiple NAT Gateway in multiple AZ
 
 ## Monitor
