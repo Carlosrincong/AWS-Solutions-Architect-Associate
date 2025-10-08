@@ -79,6 +79,11 @@ The only architectural difference between a public and private subnet is that a 
 - Bastion Host is an Instance in the public subnet with their own security group (BastionHost-SG). This instance have access to the EC2 instances in te private subnet. Users firt connect vis SSH to the Bastion Host,  then via SSH connect to the Private Instances. 
 - The key is that the Bastion Host must be have access to the internet and limited from potencial IP Users throught Security group.
 - The security group pf the private instances must allow the security group of the bastion host.
+###### NAT Instance (no recomendado)
+NAT is Network Address Translation.
+Allow private ec2 instances connect to internet. 
+NAT instance must be launched in a public subnet and attached an Elatic IP address
+The route table  of the private subnet must contain a rule that sends traffic to NAT instance when the trafficgoes to 0.0.0.0/0
 #### Virtual private gateway
 A virtual private gateway connects your VPC to another private network.
 When you have both gateways, you can then establish an encrypted virtual private network (VPN) connection between the two sides.
