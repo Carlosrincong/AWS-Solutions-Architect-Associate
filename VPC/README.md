@@ -48,14 +48,14 @@ Route Table can be attached to a subnet. Not to a VPC
 ## Security
 #### IAM 
 IAM lets you control who (group, user or role) can configure and manage your Amazon VPCs with IAM Policies or IAM Roles.
-
 #### Access control list (ACL)
 Think of a network access control list (network ACL) as a virtual firewall at the subnet level. 
 Allow and deny type of rules are allowed to be defined in the ACL.
 Network ACLs are considered stateless, so you need to include both the inbound and outbound ports used for the protocol
 The default network ACL allows all traffic in and out by default.
-- Default network ACL: configured by default to allow incoming and outgoing traffic
+- Default network ACL: configured by default to allow incoming and outgoing traffic. Not modify this NACL, instead create a custom NACL.
 - Custom network ACL
+Lower number means higher precedence. And the first rule match will drive the decision. The rules must have steps of 100 betweem them.
 #### Security group
 Security group is an instance level firewall that will allow traffic to reach the instance (resource level).
 SG is not optional when an instance is created.
