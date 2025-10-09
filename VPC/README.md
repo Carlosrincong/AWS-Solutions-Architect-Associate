@@ -99,7 +99,16 @@ Fault tolerancy: Create multiple NAT Gateway in multiple AZ
 ## Monitor
 #### Amazon VPC Flow Logs
 VPC flow logs capture information about IP traffic going to and from network interfaces in your Amazon VPC.
-Once you've set up a flow log for your Amazon VPC, you can designate an Amazon S3 bucket to store them in. Those logs can then be reviewed manually or even handled by a data processing solution to automate detection of problems in your network traffic.
+Helps us to resolve connectovity issues
+Once you've set up a flow log for your Amazon VPC, you can designate an Amazon S3 bucket, CloudWatch or Kinesis Data Firehose to store them in. 
+Those logs can then be reviewed manually or even handled by a data processing solution to automate detection of problems in your network traffic.
+Logs: VPC level, Subnet level and Network Interface level
+
+Syntax:
+- srcaddr & dstaddr - help identify problematic IP
+- srcport & dstport - help identify problematic port
+- Action - success or failure of the request due to security group or NACL
+
 #### VPC Traffic Mirroring
 #### Amazon CloudWatch
 
