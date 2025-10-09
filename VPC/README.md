@@ -117,7 +117,7 @@ VPC to VPC:
 - AWS transit Gateway
 - VPN
 
-### -------------
+### ------------- Hybrid
 
 #### AWS Direct Connect
 To establish a secure physical connection between your on-premises data center and your Amazon VPC, you can use AWS Direct Connect.
@@ -147,7 +147,7 @@ VPN metric data is automatically sent to CloudWatch as it becomes available.
 #### AWS Cloud WAN
 Connections between on premise network and AWS VPC
 
-#### ---------------
+### --------------- VPC to VPC
 
 #### VPC Peering
 VPC peering is a way to link multiple Amazon VPCs together and allows direct and private communications between two isolated Amazon VPCs using their private IP addresses across different AWS Regions. This service is not scalable, for scalability use Transit gateway.
@@ -175,15 +175,13 @@ This removes the need to route traffic over the internet:
 VPC peering connections, unlike transit gateways, have no aggregate bandwidth restriction. 
 transit gateway will incur a VPC connection and data transmission charge. VPC peering connections only incur a data transmission charge. 
 
-## -----------
-
 #### VPC EndPoints
-Connects your VPC to supported AWS services and VPC endpoint services.
+Connects your VPC to supported AWS services and VPC endpoint services using a private network. 
 Resources inside a VPC do not require public IP addresses to communicate with resources outside the VPC.
 Traffic does not leave the Amazon network.
 A VPC endpoint does not require an internet gateway, virtual private gateway, NAT device, VPN connection, or Direct Connect connection. Types:
-- Gateway VPC endpoints: A gateway VPC endpoint targets specific IP routes in a VPC route table in the form of a prefix list.
-- Interface endpoints (Powered by PrivateLink): private IP address from the IP address range of your subnet, which serves as an entry point for traffic destined to a supported AWS service or a VPC endpoint service. When an interface endpoint is created, endpoint-specific DNS hostnames are generated that can be used to communicate with the service. After creating the endpoint, you can submit requests to the provider’s service through one of the following three methods: Endpoint-specific regional DNS hostname, Zonal-specific DNS hostname and Private DNS hostname.
+- Gateway VPC endpoints (free): A gateway VPC endpoint targets specific IP routes in a VPC route table in the form of a prefix list. Supports s3 and DynamoDB.
+- Interface endpoints (Powered by PrivateLink): private IP address from the IP address range of your subnet, which serves as an entry point for traffic destined to a supported AWS service or a VPC endpoint service. When an interface endpoint is created, endpoint-specific DNS hostnames are generated that can be used to communicate with the service. After creating the endpoint, you can submit requests to the provider’s service through one of the following three methods: Endpoint-specific regional DNS hostname, Zonal-specific DNS hostname and Private DNS hostname. Supports mos of AWS resources. Use for s3/DyanoDB only when the connectovity is hybrid or from another VPC. 
 - Gateway Load Balancer endpoint (Powered by PrivateLink): You specify a Gateway Load Balancer endpoint as a target for a route in a route table. 
 
 #### AWS PrivateLink
