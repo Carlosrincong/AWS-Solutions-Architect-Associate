@@ -153,10 +153,12 @@ Connections between on premise network and AWS VPC
 VPC peering is a way to link multiple Amazon VPCs together and allows direct and private communications between two isolated Amazon VPCs using their private IP addresses across different AWS Regions. This service is not scalable, for scalability use Transit gateway.
 This communication is accomplished using private IP addresses, without requiring gateways, VPN connections, or separate network appliances.
 Traffic never traverses the public internet
-VPC peering connection is nontransitive in nature and does not allow network traffic to pass from one peering connection to another.
+VPC peering connection is **nontransitive** in nature and does not allow network traffic to pass from one peering connection to another.
 You cannot create a VPC peering connection if the VPCs have matching or overlapping IPv4 CIDR blocks. 
 If either VPC in a peering relationship has one connection (VPN, Direct, NAT, IGW, VPC Endpoint), you cannot extend the peering relationship to that connection.
 With VPC Peering you can replicate data from one VPC to another and the traffic never traverses the public internet,
+Route table must be updated in each VPC network to ensure communication between them
+VPCs can be in different accounts/regions
 
 #### AWS Transit Gateway
 Manage and simplify connections and peering for your Amazon VPCs. Provides interconnectivity between VPCs and your on-premises network (With a VPN or Direct Connection), such as a hub-and-spokes architecture. 
