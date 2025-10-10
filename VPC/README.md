@@ -143,6 +143,7 @@ Connection can be establist in time longer than 1 month
 Data in transit is not encrypted but it is private. For a IPsec-encrypted private connection use Direct Connect with VPN
 A Virtual Private Gateway (VPGW) is requerired in the VPC 
 High resiliency fir critical workloads
+You can use Site-to-site VPN Connection to be a backup connection in case direct connect (primary connection) fails
 
 - Increase the bandwidth throughput- working with large datasets
 - Consistent network experience
