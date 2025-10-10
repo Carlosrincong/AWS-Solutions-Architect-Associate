@@ -150,8 +150,18 @@ AWS Site-to-Site VPN enables you to securely connect your on-premises network to
 VPN connection consists of two tunnels. Each tunnel terminates in a different Availability Zone on the AWS side, but it must terminate on the same customer gateway on the customer side. 
 when you connect your VPCs to a common on-premises network, we recommend that you use nonoverlapping CIDR blocks for your networks.
 VPN metric data is automatically sent to CloudWatch as it becomes available.
-
+- S2S VPN Connection is established between Virtual Private Gateway (VPGW) in AWS and there are two options in the client side:
+    -  Customer Gateway (CGW: software or physucal connection) with a public IP address in the customer Data center.
+    -  NAT Device with their Public IP Address connected to an internal Customer Gateway and their private IP address. All in the customer Data center. 
+- IMPORTANT: enable Route propagation for the VPGW in the route table that is associated with the subnets
 ![vpn_architecture](/img/vpn_architecture.png)
+
+###### AWS VPN CloudHub
+In case the customer have multiple data centers on-premise each with their own Customer gateway.
+- Low cost hub-and-spoke model
+- This model allow each data center comunicate with the others throught that VPN connection
+- Traffic goes over the public internet
+- set-up: connect each site with the same VPGW, setup dynamic routing and configure route tables.
 
 #### AWS Cloud WAN
 Connections between on premise network and AWS VPC
