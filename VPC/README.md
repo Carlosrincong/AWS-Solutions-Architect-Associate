@@ -128,14 +128,27 @@ VPC to VPC:
 
 ### ------------- Hybrid
 
-#### AWS Direct Connect
+#### AWS Direct Connect (DX)
 To establish a secure physical connection between your on-premises data center and your Amazon VPC, you can use AWS Direct Connect.
 You can choose to connect to a Collocation, Direct Connect Partner (Who has connectivity with the AWS collocation) or Direct Connect Node.
-There are tree types od Ethernet connections: 1 gb per second, 10 gb per second and 100 gb per second.
+Connection types:
+- Dedicated: There are tree types of Ethernet connections: 1 gb per second, 10 gb per second and 100 gb per second.
+- Hosted: There are tree types of Ethernet connections: 50 mb per second, 500 mb per second and 10 gb per second.
+
 Connection is stablished with BGP and optional BFD.
 Direct connect suports IPv4, IPv6 or both.
 Define the Virtual Interfaces: Private, Public or Transit.
 Setup two Routers in the AWS Direct connect location for Highly available hybrid network connections. This eliminate the single points of failure when you have only one router in the AWS Direct Connect Location.
+Connection can be establist in time longer than 1 month 
+Data in transit is not encrypted but it is private. For a IPsec-encrypted private connection use Direct Connect with VPN
+A Virtual Private Gateway (VPGW) is requerired in the VPC 
+High resiliency fir critical workloads
+
+- Increase the bandwidth throughput- working with large datasets
+- Consistent network experience
+
+###### Direct Connect Gateway
+To set up DX to one or more VPC in many regions and same account
 
 #### AWS Client VPN
 AWS Client VPN enables you to securely connect users (or remote teams) to AWS or on-premises networks
