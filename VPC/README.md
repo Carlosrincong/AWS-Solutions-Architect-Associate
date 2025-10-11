@@ -293,3 +293,11 @@ Dual stack mode: when IPv6 is enabled.
 The instance will get at least a private IPv4 and a public IPv6
 they can communicate using either IPv4 or IPv6 to the internet through an Internet Gateway
 - When a service is provisioned in a subnet it requires a private IPv4 available and a public Ipv6. If either of the two are not available, the service can´t be launched. so, it is neccesary to increase the space of the subnet by editing the CIDR block or creating a new CIDR in the subnet. 
+
+#### Egress-only Internet Gateway 
+- Used for IPv6 only, similar to a NAT gatewayo but for IPv6
+- You must update the route table
+- cant initiate conncetions from Internet. But the instances in the VPC can outbound connections
+
+- Public subnet: both ipv4 and ipv6 connect to internet usign the Internet Gateway.
+- Private subnet: ipv4 connect to internet using a NAT gateway and the internet gateway. Ipv6 connect to internet using Egress-only internet gateway.
