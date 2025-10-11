@@ -114,6 +114,15 @@ Capture and inspect network traffic in the VPC. The traffic can be captured when
 
 #### Amazon CloudWatch
 
+## Networking Cost
+- Free for traffic into the VPC and for traffic between instances in the same AZ. 
+- cost for a Elastic IP
+- Cost for traffic between instances in different AZ (using private IP) and a little bit higher for traffic between different region. 
+- Keep the traffic in AWS to saving cost, due to egress traffic generate cost.
+- Direct connect location that are co-located in the same region result in lower cost for egress network
+- Use VPC endpoint always that is possible and use NAT gateway only when is absolutely neccesary, because NAT gateway is expensive. 
+
+
 ## Connectivity
 AWS provides services and hybrid connectivity solutions to link your on premises and AWS networks.
 Hybrid:
