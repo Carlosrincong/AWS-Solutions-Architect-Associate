@@ -110,6 +110,7 @@ Syntax:
 - Action - success or failure of the request due to security group or NACL
 
 #### VPC Traffic Mirroring
+Capture and inspect network traffic in the VPC. The traffic can be captured when comes from or goes to a Network Interface (ENI) and mirroring to a cluster to analize. That cluster can be behind a network load balancer. optionally the mirrored traffic can be filtered  
 #### Amazon CloudWatch
 
 ## Connectivity
