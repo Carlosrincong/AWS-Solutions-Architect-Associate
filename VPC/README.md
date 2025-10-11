@@ -111,6 +111,7 @@ Syntax:
 
 #### VPC Traffic Mirroring
 Capture and inspect network traffic in the VPC. The traffic can be captured when comes from or goes to a Network Interface (ENI) and mirroring to a cluster to analize. That cluster can be behind a network load balancer. optionally the mirrored traffic can be filtered  
+
 #### Amazon CloudWatch
 
 ## Connectivity
@@ -283,3 +284,12 @@ Use the virtual private gateway to stablish a on premise connectivity to the dat
     - Will only ever be used by you
 - N-tier VPC  to limit access and tight coupling as much as possible. 
 - Complex designs with connectivity and peering options
+
+## IPv6
+every IPv6 in AWS is public and internet-routable
+IPv4 can´t be disabled for VPC and subnets. 
+Dual stack mode: when IPv6 is enabled. 
+
+The instance will get at least a private IPv4 and a public IPv6
+they can communicate using either IPv4 or IPv6 to the internet through an Internet Gateway
+- When a service is provisioned in a subnet it requires a private IPv4 available and a public Ipv6. If either of the two are not available, the service can´t be launched. so, it is neccesary to increase the space of the subnet by editing the CIDR block or creating a new CIDR in the subnet. 
