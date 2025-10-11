@@ -194,6 +194,13 @@ Route table must be updated in each VPC network to ensure communication between 
 VPCs can be in different accounts/regions
 
 #### AWS Transit Gateway
+- Transitive peering between thousands of VPCs and on-premises , for a hub-and-spoke connection. With Transit Gateway in the center. The VPCs are conected to the Transit Gateway, then they are connected transivtely through the Transit Gateway with no need of peering. All VPCs can talk with each other. 
+- Regional resource, can work cross-region
+- Share across accoutn using Resource Access Manager (RAM)
+- Peer transit gateway cross-region
+- Route tables can limit which VPC can talk with other VPC.
+- works with Direct connect Gateway and VPN Connections.
+- Other use: increase the bandwith of site-to-site VPN Connections using ECMP. VPC to Transit Gateway instead of VPC to Virtual private Gateway. 
 Manage and simplify connections and peering for your Amazon VPCs. Provides interconnectivity between VPCs and your on-premises network (With a VPN or Direct Connection), such as a hub-and-spokes architecture. 
 Transit gateways adds scalability, connectivity, better visibility and control, and improved security over peering connections. 
 A transit gateway has a default route table and can optionally have additional route tables.
