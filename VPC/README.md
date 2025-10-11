@@ -68,6 +68,11 @@ security groups are not capable of explicitly blocking traffic. If you need to b
 ![security_groups](/img/security_groups.jpg)
 
     Route tables to control outbound traffic mainly and Security (ACL and Security Group) to control how traffic ingress to vpc
+#### OTHER:
+- WAF
+- Shield and Shield Advanced
+- Firewall Manager
+- Network Firewall: Protect the entire VPC with a Firewall. From the layer 3 to the layer 7. Internally uses the Gateway Load balancer. This rules can be centrally managed cross-account by Firewall Manager
 
 ## Gateways
 #### Internet gateway (IGW)
