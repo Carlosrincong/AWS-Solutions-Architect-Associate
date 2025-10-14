@@ -131,3 +131,6 @@ Use case:
 - Long runnig processing
 - Saving the RAM state
 - Services that take time to initialize
+
+# VMware
+- Customer can use to manage on-premise data center
