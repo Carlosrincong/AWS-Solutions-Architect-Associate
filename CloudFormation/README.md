@@ -11,3 +11,6 @@ With CloudFormation, you can apply DevOps and GitOps best practices and trigger 
 An issue to keep in mind, when you get to specific resources, is how the lifecycle of each resource is managed. For example, if a change to a resource requires replacing the resource, you should be more careful when using it while it is changing. 
 
 Do not make changes to stack resources outside of CloudFormation. 
+
+#### Service Role
+- iam:PassRole on cloudfromation:* -> Role to create/update/delete stack resources even if the user don´t have permission to work with those resources
