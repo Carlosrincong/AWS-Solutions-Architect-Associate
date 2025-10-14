@@ -134,3 +134,7 @@ Use case:
 
 # VMware
 - Customer can use to manage on-premise data center
+
+# AWS System Manager (SSM)
+with session manager you can connect to EC2 instances usign a SSM role and without SSH, bastion host or other. 
+Therefore the instance can no have any security group or ssh access and the user can secure connect to the instance. 
