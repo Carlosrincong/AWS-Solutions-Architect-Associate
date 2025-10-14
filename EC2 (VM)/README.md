@@ -138,3 +138,9 @@ Use case:
 # AWS System Manager (SSM)
 with session manager you can connect to EC2 instances usign a SSM role and without SSH, bastion host or other. 
 Therefore the instance can no have any security group or ssh access and the user can secure connect to the instance. 
+
+### Other
+- run command: run a command in a list of instances
+- patch manager: automate the process of pathing managed instances
+- maintenance window
+- automation: common maintenance and deployment task -> ebs snapshots, create ami, restart instance.
