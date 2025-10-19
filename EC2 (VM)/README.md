@@ -144,3 +144,7 @@ Therefore the instance can no have any security group or ssh access and the user
 - patch manager: automate the process of pathing managed instances
 - maintenance window
 - automation: common maintenance and deployment task -> ebs snapshots, create ami, restart instance.
+
+# Outposts
+- AWS rack into the customer Data center
+- Services that can run: Ec2, EBS , EKS, S3, ECS, RDS, EMR
