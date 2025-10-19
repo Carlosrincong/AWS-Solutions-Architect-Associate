@@ -17,3 +17,7 @@ Use case
 - Deep learning network
 - Massively parallel ETL job
 - tighly coupled HPC aplication
+
+This service is more similar to ECS, Fargate or EKS than it is to Glue job. 
+Containarized jobs in a managed cluster
+Orchestrator of batch workloads in containers
