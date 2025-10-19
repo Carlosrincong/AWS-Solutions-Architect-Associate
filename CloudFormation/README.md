@@ -14,3 +14,10 @@ Do not make changes to stack resources outside of CloudFormation.
 
 #### Service Role
 - iam:PassRole on cloudfromation:* -> Role to create/update/delete stack resources even if the user don´t have permission to work with those resources
+
+# Instance Scheduler
+Automatically start and stop instances to reduce cost
+Services: Autoscaling group, EC2 and RDS
+Schedules are managed in a DynamoDB table
+Using service´s tags a Lambda start and stop instances
+cross-region and cross-account
