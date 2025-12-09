@@ -55,8 +55,7 @@ Network ACLs are considered stateless, so you need to include both the inbound a
 The default network ACL allows all traffic in and out by default.
 - Default network ACL: configured by default to allow incoming and outgoing traffic. Not modify this NACL, instead create a custom NACL.
 - Custom network ACL
-Lower number means higher precedence. And the first rule match will drive the decision. The rules must have steps of 100 betweem them.
-- Evaluacion Secuencial
+Lower number means higher precedence. And the first rule match will drive the decision. The rules must have steps of 100 betweem them. Evaluacion Secuencial
 #### Security group
 Security group is an instance level firewall that will allow traffic to reach the instance (resource level).
 SG is not optional when an instance is created.
@@ -64,8 +63,7 @@ The default configuration of a security group blocks all inbound traffic and all
 To allow inbound traffic, you must create inbound (only allow) rules.
 A common design pattern is to organize resources into different groups and create security groups for each to control network communication between them.
 SG are Statefull 
-security groups are not capable of explicitly blocking traffic. If you need to block a certain IP address or a block of IP addresses, you will require assistance from network ACLs.
-- Evaluacion implicita
+security groups are not capable of explicitly blocking traffic. If you need to block a certain IP address or a block of IP addresses, you will require assistance from network ACLs. Evaluacion implicita
 
 ![security_groups](/img/security_groups.jpg)
 
