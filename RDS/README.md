@@ -46,7 +46,7 @@ Security
 - IAM authentication (optional instead of user+psw)
 - Secure data in transit and at rest.
 - Network ACLs
-- At rest encryption using KMS. If the master instance is not encryoted, the read replica can´t be encrypted. Snaptshot and restore as encrypted to encrypt and un-encrypted database.
+- At rest encryption using KMS. If the master instance is not encryoted, the read replica can´t be encrypted. Snaptshot and restore as encrypted to encrypt an un-encrypted database.
 - In-flight encryption using TLS certificates.
 - Audit logs (optional)
 

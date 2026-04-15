@@ -63,7 +63,7 @@ We recommend Savings Plans over Reserved Instances
 - Saving plans (--):  low usage prices for a 1-year or 3-year term commitment to a consistent amount of usage. You chooser certain instance type and region.
 - Reserved instances (-): long workloads. You reserve for a period (1 or 3 years) specific instance attribute such as: tenancy, instance type, regions or zone, OS, so on. You can buy or sell the reservation. You can choose an convertible reserved instance.
 - Dedicated hosts (+++): book an entire physical server. You control instance placement. Compliance requirements or complicated licensing model. There are two options: Ondemand or reserved.
-- Dedicated instances (+): may share your hardware with other instances.
+- Dedicated instances (++): may share your hardware with other instances.
 - You are not billed if an instance is in a stopped state.
 - A best practice is combine regional reserved instances and saving plans
 - Capacity reservation: to tell to AWS that you need a capacity availaible to use. You pay for this reservation even if you dont use

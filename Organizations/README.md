@@ -1,7 +1,7 @@
 
 # AWS Organizations
 
-- Global service that allows to Manage multiple AWS Accounts
+- Global service that allows you to Manage multiple AWS Accounts
 - The main account is called the management account anbd the others are memeber accounts
 - One member account olny can be part of one Organization
 - Consolidated billing across all accounts. That means a single payment method
